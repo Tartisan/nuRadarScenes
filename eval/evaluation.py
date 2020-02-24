@@ -29,7 +29,6 @@ class Evaluation:
         plt.ion()
         self.fig = plt.figure(figsize=(12, 8))
 
-
     def plotTrajectory(self, pose):
         if self.fig == None:
             plt.ion()
@@ -80,32 +79,35 @@ class Evaluation:
             plt.ion()
             self.fig = plt.figure()
         if self.ax2 == None:
-            self.ax2 = self.fig.add_subplot(222)
+            self.ax2 = self.fig.add_subplot(111)
             self.imshow = self.ax2.imshow(img, origin='centre', vmax=2)
         else:
             self.imshow.set_data(img)
 
     def get_pt_coordinates(self, pc):
-        x = [e[0] for e in pc]
-        y = [e[1] for e in pc]
-        z = [e[2] for e in pc]
+        # x = [e[0] for e in pc]
+        # y = [e[1] for e in pc]
+        # z = [e[2] for e in pc]
+        print(pc)
+        x = pc.points[0, :]
+        y = pc.points[1, :]
+        z = pc.points[2, :]
         return x, y, z
 
-    def plotPcl(self, pc, dimension=2):
+    def plot_pointcloud(self, pc, color = 'blue', size = 0.5, marker = '.'):
         if self.fig == None:
             plt.ion()
             self.fig = plt.figure()
         if self.ax == None:
-            self.ax = self.fig.add_subplot(221, projection='3d') if dimension == 3 else self.fig.add_subplot(221)
+            self.ax = self.fig.add_subplot(111)
             self.ax.set_xlabel('X')
             self.ax.set_ylabel('Y')
-            self.ax.set_zlabel('Z') if dimension == 3 else None
-            self.ax.set_xlim([-150, 150])
-            self.ax.set_ylim([-100, 100])
+            self.ax.axis('equal')
+            self.ax.set_xlim([-40, 100])
+            self.ax.set_ylim([-50, 50])
             x, y, z = self.get_pt_coordinates(pc)
-            self.scat = self.ax.scatter(x, y, z, c='r', marker='o') if dimension == 3 else self.ax.scatter(x, y, c='black', s=0.5,                                                                                        marker='o')
-            self.ax.add_patch(Rectangle(xy=(-0.562, 1.256/2), width=3.974, height=1.256, linewidth=1, color='blue', fill=True))
-            plt.show()
+            self.scat = self.ax.scatter(x, y, c=color, s=size, marker=marker)
+            # self.ax.add_patch(Rectangle(xy=(-0.562, 1.256/2), width=3.974, height=1.256, linewidth=1, color='blue', fill=True))
         else:
             x, y, z = self.get_pt_coordinates(pc)
             self.scat.set_offsets(np.c_[x,y])
@@ -116,7 +118,8 @@ class Evaluation:
             plt.tight_layout()
         if self.fig != None:
             self.fig.canvas.draw_idle()
-            plt.pause(0.001)
+            plt.pause(0.05)
+            # plt.show()
 
     def reset(self):
         self.xdata = []
