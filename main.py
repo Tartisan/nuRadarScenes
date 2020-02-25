@@ -16,38 +16,25 @@ def writeDataset():
 
     while True:
         start = time.time()
-        pc_lidar, color_lidar, pose = dr.next_pointcloud('LIDAR_TOP')
-        if pc_lidar is None:
-            if dr.next_scene() == 0:
-                exit(0)
-            pc_lidar, color_lidar, pose = dr.next_pointcloud('LIDAR_TOP')
-
-        pc_radar_f, color_radar_f, pose = dr.next_pointcloud('RADAR_FRONT')
-        if pc_radar_f is None:
-            if dr.next_scene() == 0:
-                exit(0)
-            pc_radar_f, color_radar_f, pose = dr.next_pointcloud('RADAR_FRONT')
-
-        
-        #     pc_radar_fl, color_radar_fl, pose = dr.next_pointcloud('RADAR_FRONT_LEFT')
-        #     pc_radar_fr, color_radar_fr, pose = dr.next_pointcloud('RADAR_FRONT_RIGHT')
-        #     pc_radar_bl, color_radar_bl, pose = dr.next_pointcloud('RADAR_BACK_LEFT')
-        #     pc_radar_br, color_radar_br, pose = dr.next_pointcloud('RADAR_BACK_RIGHT')
-        
-        # pc_radar_f, color_radar_f, pose = dr.next_pointcloud('RADAR_FRONT')
-        # pc_radar_fl, color_radar_fl, pose = dr.next_pointcloud('RADAR_FRONT_LEFT')
-        # pc_radar_fr, color_radar_fr, pose = dr.next_pointcloud('RADAR_FRONT_RIGHT')
-        # pc_radar_bl, color_radar_bl, pose = dr.next_pointcloud('RADAR_BACK_LEFT')
-        # pc_radar_br, color_radar_br, pose = dr.next_pointcloud('RADAR_BACK_RIGHT')
+        pc_lidar, color_lidar, pose = dr.get_pointcloud('LIDAR_TOP')
+        pc_radar_f, color_radar_f, pose = dr.get_pointcloud('RADAR_FRONT')
+        pc_radar_fl, color_radar_fl, pose = dr.get_pointcloud('RADAR_FRONT_LEFT')
+        pc_radar_fr, color_radar_fr, pose = dr.get_pointcloud('RADAR_FRONT_RIGHT')
+        pc_radar_bl, color_radar_bl, pose = dr.get_pointcloud('RADAR_BACK_LEFT')
+        pc_radar_br, color_radar_br, pose = dr.get_pointcloud('RADAR_BACK_RIGHT')
+        boxes = dr.get_boxes('LIDAR_TOP')
+        # go to next sample
+        dr.next_sample()
 
         # grid = preproc.getRadarGrid(pc, pose)
         # preproc.addGrid2File()
-        eval.plot_pointcloud(pc_lidar, color_lidar, 0.5, '.')
-        eval.plot_pointcloud(pc_radar_f, color_radar_f, 5, 'o')
-        # eval.plot_pointcloud(pc_radar_fl, color_radar_fl, 5, 'o')
-        # eval.plot_pointcloud(pc_radar_fr, color_radar_fr, 5, 'o')
-        # eval.plot_pointcloud(pc_radar_bl, color_radar_bl, 5, 'o')
-        # eval.plot_pointcloud(pc_radar_br, color_radar_br, 5, 'o')
+        eval.plot_pointcloud(pc_lidar, 'c', 0.3, '.')
+        eval.plot_pointcloud(pc_radar_f, color_radar_f, 5, ',')
+        eval.plot_pointcloud(pc_radar_fl, color_radar_fl, 5, ',')
+        eval.plot_pointcloud(pc_radar_fr, color_radar_fr, 5, ',')
+        eval.plot_pointcloud(pc_radar_bl, color_radar_bl, 5, ',')
+        eval.plot_pointcloud(pc_radar_br, color_radar_br, 5, ',')
+        eval.plot_boxes(boxes)
         # eval.plotGrid(grid)
         # eval.plotTrajectory(pose)
         eval.draw()
@@ -57,17 +44,9 @@ def writeDataset():
             time.sleep(0.5 - (end-start))
         print("Time per frame: {:1.4f}s".format(time.time() - start))
 
-def write_test(): 
-    while True: 
-        start = time.time()
-        time.sleep(0.05)
-        end = time.time()
-        print("Test time interval: {:1.4f}s".format(end - start))
-
 def trainModel():
     preproc = preprocessing.Preprocessing()
     preproc.readFile()
-
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Process some integers.')

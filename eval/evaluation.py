@@ -28,6 +28,12 @@ class Evaluation:
 
         plt.ion()
         self.fig = plt.figure(figsize=(12, 8))
+        self.ax = self.fig.add_subplot(111)
+        self.ax.set_xlabel('X')
+        self.ax.set_ylabel('Y')
+        self.ax.axis('equal')
+        self.ax.set_xlim(-40, 100)
+        self.ax.set_ylim(-50, 50)
 
     def plotTrajectory(self, pose):
         if self.fig == None:
@@ -88,29 +94,58 @@ class Evaluation:
         # x = [e[0] for e in pc]
         # y = [e[1] for e in pc]
         # z = [e[2] for e in pc]
-        print(pc)
         x = pc.points[0, :]
         y = pc.points[1, :]
         z = pc.points[2, :]
         return x, y, z
 
-    def plot_pointcloud(self, pc, color = 'blue', size = 0.5, marker = '.'):
+    def plot_pointcloud(self, pc, color = 'b', size = 0.5, marker = '.'):
         if self.fig == None:
             plt.ion()
-            self.fig = plt.figure()
-        if self.ax == None:
-            self.ax = self.fig.add_subplot(111)
-            self.ax.set_xlabel('X')
-            self.ax.set_ylabel('Y')
-            self.ax.axis('equal')
-            self.ax.set_xlim([-40, 100])
-            self.ax.set_ylim([-50, 50])
-            x, y, z = self.get_pt_coordinates(pc)
-            self.scat = self.ax.scatter(x, y, c=color, s=size, marker=marker)
-            # self.ax.add_patch(Rectangle(xy=(-0.562, 1.256/2), width=3.974, height=1.256, linewidth=1, color='blue', fill=True))
+            self.fig = plt.figure(figsize=(12, 8))
+        self.ax = self.fig.add_subplot(111)
+        self.ax.set_xlabel('X')
+        self.ax.set_ylabel('Y')
+        self.ax.axis('equal')
+        self.ax.set_xlim(-40, 100)
+        self.ax.set_ylim(-50, 50)
+        x, y, z = self.get_pt_coordinates(pc)
+        # self.ax.plot(x, y, 'b.', markersize=size)
+        self.ax.scatter(x, y, c=color, s=size, marker=marker)
+        # self.ax.add_patch(Rectangle(xy=(-0.562, 1.256/2), width=3.974, height=1.256, linewidth=1, color='blue', fill=True))
+
+    def plot_boxes(self, boxes):
+        if self.fig == None:
+            plt.ion()
+            self.fig = plt.figure(figsize=(12, 8))
+        self.ax = self.fig.add_subplot(111)
+        self.ax.set_xlabel('X')
+        self.ax.set_ylabel('Y')
+        self.ax.axis('equal')
+        self.ax.set_xlim(-40, 100)
+        self.ax.set_ylim(-50, 50)
+        for box in boxes:
+            category_name = box.name
+            if 'cone' in category_name or 'barrier' in category_name or 'pedestrian' in category_name:
+                continue
+            c = np.array(self.get_color(category_name)) / 255.0
+            box.render(self.ax, view=np.eye(4), colors=(c, c, c))
+        
+    def get_color(self, category_name: str):
+        """
+        Provides the default colors based on the category names.
+        This method works for the general nuScenes categories, as well as the nuScenes detection categories.
+        """
+        if 'bicycle' in category_name or 'motorcycle' in category_name:
+            return 255, 61, 99  # Red
+        elif 'vehicle' in category_name or category_name in ['bus', 'car', 'construction_vehicle', 'trailer', 'truck']:
+            return 255, 158, 0  # Orange
+        # elif 'pedestrian' in category_name:
+        #     return 0, 0, 230  # Blue
+        # elif 'cone' in category_name or 'barrier' in category_name:
+        #     return 0, 0, 0  # Black
         else:
-            x, y, z = self.get_pt_coordinates(pc)
-            self.scat.set_offsets(np.c_[x,y])
+            return 255, 0, 255  # Magenta
 
     def draw(self):
         if self.tightened == False:
@@ -118,8 +153,9 @@ class Evaluation:
             plt.tight_layout()
         if self.fig != None:
             self.fig.canvas.draw_idle()
+            plt.show()
             plt.pause(0.05)
-            # plt.show()
+            self.ax.cla()
 
     def reset(self):
         self.xdata = []
