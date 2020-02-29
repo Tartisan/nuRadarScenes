@@ -90,16 +90,16 @@ class Evaluation:
         else:
             self.imshow.set_data(img)
 
-    def get_pt_coordinates(self, pc):
+    def get_pt_coordinates(self, points):
         # x = [e[0] for e in pc]
         # y = [e[1] for e in pc]
         # z = [e[2] for e in pc]
-        x = pc.points[0, :]
-        y = pc.points[1, :]
-        z = pc.points[2, :]
+        x = points[0, :]
+        y = points[1, :]
+        z = points[2, :]
         return x, y, z
 
-    def plot_pointcloud(self, pc, color = 'b', size = 0.5, marker = '.'):
+    def plot_pointcloud(self, points, color = 'b', size = 0.5, marker = '.'):
         if self.fig == None:
             plt.ion()
             self.fig = plt.figure(figsize=(12, 8))
@@ -109,7 +109,7 @@ class Evaluation:
         self.ax.axis('equal')
         self.ax.set_xlim(-40, 100)
         self.ax.set_ylim(-50, 50)
-        x, y, z = self.get_pt_coordinates(pc)
+        x, y, z = self.get_pt_coordinates(points)
         # self.ax.plot(x, y, 'b.', markersize=size)
         self.ax.scatter(x, y, c=color, s=size, marker=marker)
         # self.ax.add_patch(Rectangle(xy=(-0.562, 1.256/2), width=3.974, height=1.256, linewidth=1, color='blue', fill=True))

@@ -2,7 +2,7 @@
 
 from nuscenes.nuscenes import NuScenes
 from nuscenes.utils.data_classes import LidarPointCloud, RadarPointCloud, Box
-from nuscenes.utils.geometry_utils import view_points, box_in_image, BoxVisibility, transform_matrix
+from nuscenes.utils.geometry_utils import view_points, BoxVisibility
 from pyquaternion import Quaternion
 import numpy as np
 import os
@@ -50,8 +50,8 @@ class DataReader:
                     self.invalid_states, self.dynprop_states, self.ambig_states)
             coloring = pc.points[2, :]
 
-        print(sensor, "points.shape:", pc.points.shape)
-        # transform the point-cloud to the ego vehicle frame
+        # print(sensor, "points.shape:", pc.points.shape)
+        ## transform the point-cloud to the ego vehicle frame
         pc.rotate(Quaternion(sensor_calib['rotation']).rotation_matrix)
         pc.translate(np.array(sensor_calib['translation']))
 
@@ -78,3 +78,93 @@ class DataReader:
         self.scene = self.nusc.scene[self.scene_id]
         self.current_sample = self.nusc.get('sample', self.scene['first_sample_token'])
         return self.scene_id
+
+    def test(self): 
+        sensor_sample_token = self.current_sample['data']['RADAR_FRONT']
+        sensor_calib_token = self.nusc.get('sample_data', sensor_sample_token)['calibrated_sensor_token']
+        sensor_sample = self.nusc.get('sample_data', sensor_sample_token)
+        sensor_calib = self.nusc.get('calibrated_sensor', sensor_calib_token)
+
+        pc = RadarPointCloud.from_file(
+                os.path.normpath(self.dataroot + '/' + sensor_sample['filename']), 
+                self.invalid_states, self.dynprop_states, self.ambig_states)
+        pc_xyz = pc.points[:3, :]
+        print(pc_xyz.shape)
+
+        _, boxes, _ = self.nusc.get_sample_data(self.current_sample['data']['RADAR_FRONT'], BoxVisibility.ANY,
+                                                use_flat_vehicle_coordinates=True)
+        mask = points_in_box(boxes[5], pc_xyz, wlh_factor=1.0)
+        print((mask).shape)
+        # pc_xyz = pc_xyz[mask]
+        print(pc_xyz.T[mask].shape)
+        print(pc_xyz.T[mask])
+
+    def points_with_anno(self, points, boxes):
+        points_with_anno = np.r_[points, np.zeros((1, points.shape[1]))]
+        for box in boxes:
+            category_name = box.name
+            if ('cone' in category_name or 
+                'barrier' in category_name or 
+                'pedestrian' in category_name):
+                continue
+            mask = self.points_in_box(points_with_anno[:2, :], box)
+            points_with_anno[-1, :] += mask
+        return points_with_anno
+
+    def points_in_box(self, points, box):
+        """
+        Checks whether points are inside the box.
+
+        Picks one corner as reference (p1) and computes the vector to a target point (v).
+        Then for each of the 3 axes, project v onto the axis and compare the length.
+        Inspired by: https://math.stackexchange.com/a/1552579
+        :param box: <Box>.
+        :param points: <np.float: 3, n>.
+        :param wlh_factor: Inflates or deflates the box.
+        :return: <np.bool: n, >.
+        """
+        corners = view_points(box.corners(), np.eye(3), False)[:2, [7, 3, 2, 6]]
+        # print(corners)
+        p1 = corners[:, 0]
+        p_x = corners[:, 1]
+        p_y = corners[:, 3]
+        # p_z = corners[:, 3]
+
+        i = p_x - p1
+        j = p_y - p1
+        # k = p_z - p1
+
+        v = points - p1.reshape((-1, 1))
+
+        iv = np.dot(i, v)
+        jv = np.dot(j, v)
+        # kv = np.dot(k, v)
+
+        mask_x = np.logical_and(0 <= iv, iv <= np.dot(i, i))
+        mask_y = np.logical_and(0 <= jv, jv <= np.dot(j, j))
+        # mask_z = np.logical_and(0 <= kv, kv <= np.dot(k, k))
+        mask = np.logical_and(mask_x, mask_y)
+
+        return mask
+        
+
+    def is_point_in_box(self, point, boxes):
+        def get_cross(self, p1, p2, point):
+            x = point[0]
+            y = point[1]
+            x1 = p1[0]
+            y1 = p1[1]
+            x2 = p2[0]
+            y2 = p2[1]
+            return (x2 - x1) * (y - y1) - (x - x1) * (y2 - y1)
+        for box in boxes:
+            conner = view_points(box.corners(), np.eye(3), False)[:2, [7, 3, 2, 6]]
+            p1 = conner[0, :]
+            p2 = conner[1, :]
+            p3 = conner[2, :]
+            p4 = conner[3, :]
+            is_in = (get_cross(p1, p2, point) * get_cross(p3, p4, point) >= 0 and 
+                     get_cross(p2, p3, point) * get_cross(p4, p1, point) >= 0)
+
+
+        

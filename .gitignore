@@ -128,3 +128,5 @@ dmypy.json
 
 # vscode
 .vscode
+# debug
+*.csv

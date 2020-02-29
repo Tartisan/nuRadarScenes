@@ -5,8 +5,9 @@ from data_management import data_ingest, preprocessing
 import argparse
 from model import model, train
 import tensorflow as tf
-import time, threading
-import matplotlib.pyplot as plt
+import time
+import threading
+import numpy as np
 
 
 def writeDataset():
@@ -14,35 +15,47 @@ def writeDataset():
     eval = evaluation.Evaluation()
     # preproc = preprocessing.Preprocessing()
 
+    f = open('radar_v1.0_mini.csv','a')
     while True:
         start = time.time()
         pc_lidar, color_lidar, pose = dr.get_pointcloud('LIDAR_TOP')
-        pc_radar_f, color_radar_f, pose = dr.get_pointcloud('RADAR_FRONT')
-        pc_radar_fl, color_radar_fl, pose = dr.get_pointcloud('RADAR_FRONT_LEFT')
-        pc_radar_fr, color_radar_fr, pose = dr.get_pointcloud('RADAR_FRONT_RIGHT')
-        pc_radar_bl, color_radar_bl, pose = dr.get_pointcloud('RADAR_BACK_LEFT')
-        pc_radar_br, color_radar_br, pose = dr.get_pointcloud('RADAR_BACK_RIGHT')
+        pc_radar_f, _, pose = dr.get_pointcloud('RADAR_FRONT')
+        pc_radar_fl, _, pose = dr.get_pointcloud('RADAR_FRONT_LEFT')
+        pc_radar_fr, _, pose = dr.get_pointcloud('RADAR_FRONT_RIGHT')
+        pc_radar_bl, _, pose = dr.get_pointcloud('RADAR_BACK_LEFT')
+        pc_radar_br, _, pose = dr.get_pointcloud('RADAR_BACK_RIGHT')
         boxes = dr.get_boxes('LIDAR_TOP')
         # go to next sample
         dr.next_sample()
 
         # grid = preproc.getRadarGrid(pc, pose)
         # preproc.addGrid2File()
-        eval.plot_pointcloud(pc_lidar, 'c', 0.3, '.')
-        eval.plot_pointcloud(pc_radar_f, color_radar_f, 5, ',')
-        eval.plot_pointcloud(pc_radar_fl, color_radar_fl, 5, ',')
-        eval.plot_pointcloud(pc_radar_fr, color_radar_fr, 5, ',')
-        eval.plot_pointcloud(pc_radar_bl, color_radar_bl, 5, ',')
-        eval.plot_pointcloud(pc_radar_br, color_radar_br, 5, ',')
+        points_lidar = pc_lidar.points
+        points_radar = np.c_[(pc_radar_f.points, pc_radar_fl.points, 
+                              pc_radar_fr.points, pc_radar_bl.points, 
+                              pc_radar_br.points)]
+        eval.plot_pointcloud(points_lidar, 'c', 0.3, '.')
+        eval.plot_pointcloud(points_radar, 'm', 5, 'D')
         eval.plot_boxes(boxes)
         # eval.plotGrid(grid)
         # eval.plotTrajectory(pose)
         eval.draw()
+        
+        print(points_radar.shape)
+        points_radar_with_anno = dr.points_with_anno(points_radar, boxes)
+        # save points with annotation
+        np.savetxt(f, points_radar_with_anno.T, delimiter=',', fmt='%.2f')
+        
+        # print(points_radar_with_anno.shape)
+        # print(points_radar_with_anno[-1, :])
+        points_radar_filter = np.squeeze(points_radar_with_anno[:, np.where(points_radar_with_anno[-1] == 1)])
+        print(points_radar_filter.shape)
 
         end = time.time()
-        if end - start < 0.5: 
-            time.sleep(0.5 - (end-start))
+        # if end - start < 0.5: 
+        #     time.sleep(0.5 - (end-start))
         print("Time per frame: {:1.4f}s".format(time.time() - start))
+    f.close()
 
 def trainModel():
     preproc = preprocessing.Preprocessing()
