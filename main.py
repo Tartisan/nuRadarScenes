@@ -11,7 +11,9 @@ import numpy as np
 
 
 def writeDataset():
-    dr = data_ingest.DataReader(version='v1.0-mini', dataroot='/datasets/nuscenes', verbose=False)
+    dr = data_ingest.DataReader(version='v1.0-mini', 
+                                dataroot='/datasets/nuscenes', 
+                                verbose=False)
     eval = evaluation.Evaluation()
     # preproc = preprocessing.Preprocessing()
 
