@@ -1,23 +1,22 @@
 #!/usr/bin/env python
 
 from eval import evaluation
-from data_management import data_ingest, preprocessing
+from data_management import data_ingest
 import argparse
 from model import model, train
-import tensorflow as tf
 import time
 import threading
 import numpy as np
+from radarseg import Net
 
-
-def writeDataset():
+def write_dataset(save_csv=False):
     dr = data_ingest.DataReader(version='v1.0-mini', 
-                                dataroot='/datasets/nuscenes', 
+                                dataroot='/media/idriver/TartisanHardDisk/00-datasets/nuscenes/v1.0-mini', 
                                 verbose=False)
     eval = evaluation.Evaluation()
-    # preproc = preprocessing.Preprocessing()
 
-    f = open('radar_v1.0_mini.csv','a')
+    if save_csv: 
+        f = open('radar_v1.0_mini.csv','a')
     while True:
         start = time.time()
         pc_lidar, color_lidar, pose = dr.get_pointcloud('LIDAR_TOP')
@@ -39,14 +38,13 @@ def writeDataset():
         eval.plot_pointcloud(points_lidar, 'c', 0.3, '.')
         eval.plot_pointcloud(points_radar, 'm', 5, 'D')
         eval.plot_boxes(boxes)
-        # eval.plotGrid(grid)
-        # eval.plotTrajectory(pose)
         eval.draw()
         
         print(points_radar.shape)
         points_radar_with_anno = dr.points_with_anno(points_radar, boxes)
         # save points with annotation
-        np.savetxt(f, points_radar_with_anno.T, delimiter=',', fmt='%.2f')
+        if save_csv: 
+            np.savetxt(f, points_radar_with_anno.T, delimiter=',', fmt='%.2f')
         
         # print(points_radar_with_anno.shape)
         # print(points_radar_with_anno[-1, :])
@@ -57,45 +55,20 @@ def writeDataset():
         # if end - start < 0.5: 
         #     time.sleep(0.5 - (end-start))
         print("Time per frame: {:1.4f}s".format(time.time() - start))
-    f.close()
+    if save_csv: 
+        f.close()
 
-def trainModel():
-    preproc = preprocessing.Preprocessing()
-    preproc.readFile()
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Process some integers.')
-    parser.add_argument('--write-dataset', action='store_true')
-    parser.add_argument('--train-model', action='store_true')
-
+    # parser.add_argument('--write-dataset', action='store_true')
+    # parser.add_argument('--train-model', action='store_true')
+    parser.add_argument('--save-csv', action='store_true', default=False)
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     args = parse_args()
-
-    if args.write_dataset:
-        writeDataset()
-
-    if args.train_model:
-        trainModel()
-
-    
-    model = model.MyModel()
-
-    # mnist = tf.keras.datasets.mnist
-
-    # (x_train, y_train), (x_test, y_test) = mnist.load_data()
-    # x_train, x_test = x_train / 255.0, x_test / 255.0
-
-    # # Add a channels dimension
-    # x_train = x_train[..., tf.newaxis]
-    # x_test = x_test[..., tf.newaxis]
-
-    # train_ds = tf.data.Dataset.from_tensor_slices(
-    #     (x_train, y_train)).shuffle(10000).batch(32)
-    # test_ds = tf.data.Dataset.from_tensor_slices((x_test, y_test)).batch(32)
-
-    # train.train(model, train_ds, test_ds)
+    write_dataset(args.save_csv)
 
     exit(0)

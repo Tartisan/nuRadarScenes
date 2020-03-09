@@ -3,7 +3,7 @@ import tensorflow as tf
 import math
 
 def load_dataset():
-    points_radar_with_anno = np.loadtxt('../radar_v1.0_mini.csv', delimiter=',')
+    points_radar_with_anno = np.loadtxt('/home/idriver/work/wt/nuRadarScenes/radar_v1.0_mini.csv', delimiter=',')
     train_ratio = 0.8
     num_train = math.floor(points_radar_with_anno.shape[0] * train_ratio)
     X_train_orig = points_radar_with_anno[:num_train, :18].T
