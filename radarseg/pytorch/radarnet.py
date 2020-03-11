@@ -1,3 +1,6 @@
+import os
+import sys
+sys.path.append(os.getcwd())
 import argparse
 import torch
 from torch import nn
@@ -29,7 +32,7 @@ class Net(nn.Module):
 
 
 def load_dataset():
-    points_radar_with_anno = np.loadtxt('/home/idriver/work/wt/nuRadarScenes/radar_v1.0_trainval.csv', delimiter=',')
+    points_radar_with_anno = np.loadtxt('./radar_v1.0_mini.csv', delimiter=',')
     train_ratio = 0.8
     num_train = math.floor(points_radar_with_anno.shape[0] * train_ratio)
     # train data
@@ -75,7 +78,7 @@ def train(args, model, device, train_loader, costs):
         scheduler.step()
         if epoch % args.log_interval == 0:
             print('Cost after Epoch {}: {:.6f}'.format(epoch, loss.item()))
-        if epoch % 5 == 0: 
+        if epoch % 1 == 0: 
             costs.append(loss.item())
 
 
@@ -102,7 +105,7 @@ def parse_args():
                         help='input batch size for training (default: 64)')
     parser.add_argument('--test-batch-size', type=int, default=512, metavar='N',
                         help='input batch size for testing (default: 1000)')
-    parser.add_argument('--epochs', type=int, default=300, metavar='N',
+    parser.add_argument('--epochs', type=int, default=20, metavar='N',
                         help='number of epochs to train (default: 14)')
     parser.add_argument('--lr', type=float, default=0.0001, metavar='LR',
                         help='learning rate (default: 1.0)')
@@ -112,7 +115,7 @@ def parse_args():
                         help='disables CUDA training')
     parser.add_argument('--seed', type=int, default=1, metavar='S',
                         help='random seed (default: 1)')
-    parser.add_argument('--log-interval', type=int, default=10, metavar='N',
+    parser.add_argument('--log-interval', type=int, default=5, metavar='N',
                         help='how many batches to wait before logging training status')
     parser.add_argument('--save-model', action='store_true', default=False,
                         help='for Saving the current Model')
@@ -121,6 +124,7 @@ def parse_args():
 
 if __name__ == '__main__':
     args = parse_args()
+    print(args)
     print("batch_size: ", args.batch_size)
     print("epochs: ", args.epochs)
     print("learing_rate: ", args.lr)
@@ -161,4 +165,4 @@ if __name__ == '__main__':
     test(args, model, device, test_loader)
 
     if args.save_model:
-        torch.save(model.state_dict(), "radarseg_v1.0_trainval.pt")
+        torch.save(model.state_dict(), 'radarseg_v1.0_trainval.pt')
