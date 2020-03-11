@@ -147,13 +147,15 @@ class Evaluation:
         else:
             return 255, 0, 255  # Magenta
 
-    def draw(self):
+    def draw(self, save_fig, i):
         if self.tightened == False:
             self.tightened = True
             plt.tight_layout()
         if self.fig != None:
             self.fig.canvas.draw_idle()
             plt.show()
+            if save_fig:
+                plt.savefig('/Users/wangtao/work/github/nuRadarScenes/radarseg/torch/{}.png'.format(i))
             plt.pause(0.05)
             self.ax.cla()
 

@@ -9,7 +9,7 @@ from torch.optim.lr_scheduler import StepLR
 import numpy as np
 import math
 import matplotlib.pyplot as plt
-from focal_loss import focal_loss
+from radarseg.pytorch.focal_loss import focal_loss
 
 
 class Net(nn.Module):
