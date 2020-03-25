@@ -90,9 +90,9 @@ def main(args):
     BATCH_SIZE = args.batch_size
 
     print("start loading training data ...")
-    TRAIN_DATASET = RadarDataset(split='train', num_point=NUM_POINT, split_ratio=args.split_ratio)
+    TRAIN_DATASET = RadarDataset(split='train', num_point=NUM_POINT, model=args.model, split_ratio=args.split_ratio)
     print("start loading test data ...")
-    TEST_DATASET = RadarDataset(split='test', num_point=NUM_POINT, split_ratio=args.split_ratio)
+    TEST_DATASET = RadarDataset(split='test', num_point=NUM_POINT, model=args.model, split_ratio=args.split_ratio)
     trainDataLoader = torch.utils.data.DataLoader(TRAIN_DATASET, batch_size=BATCH_SIZE, shuffle=True, num_workers=4, pin_memory=True, drop_last=True, worker_init_fn = lambda x: np.random.seed(x+int(time.time())))
     testDataLoader = torch.utils.data.DataLoader(TEST_DATASET, batch_size=BATCH_SIZE, shuffle=False, num_workers=4, pin_memory=True, drop_last=True)
     weights = torch.Tensor(TRAIN_DATASET.labelweights).to(device)
@@ -120,11 +120,13 @@ def main(args):
     try:
         checkpoint = torch.load(str(experiment_dir) + '/checkpoints/best_model.pth')
         start_epoch = checkpoint['epoch']
+        best_iou = checkpoint['foreground_iou']
         classifier.load_state_dict(checkpoint['model_state_dict'])
         log_string('Use pretrain model')
     except:
         log_string('No existing model, starting training from scratch...')
         start_epoch = 0
+        best_iou = 0
         classifier = classifier.apply(weights_init)
 
     if args.optimizer == 'Adam':
@@ -148,7 +150,6 @@ def main(args):
     MOMENTUM_DECCAY_STEP = args.step_size
 
     global_epoch = 0
-    best_iou = 0
 
     for epoch in range(start_epoch,args.epoch):
         '''Train on chopped scenes'''
@@ -239,8 +240,10 @@ def main(args):
                     total_iou_deno_class[l] += np.sum(((pred_val == l) | (batch_label == l)) )
             labelweights = labelweights.astype(np.float32) / np.sum(labelweights.astype(np.float32))
             mIoU = np.mean(np.array(total_correct_class) / (np.array(total_iou_deno_class, dtype=np.float) + 1e-6))
+            fIoU = np.mean(np.array(total_correct_class[1]) / (np.array(total_iou_deno_class[1], dtype=np.float) + 1e-6))
             log_string('eval mean loss: %f' % (loss_sum / float(num_batches)))
             log_string('eval point avg class IoU: %f' % (mIoU))
+            log_string('eval point foreground IoU: %f' % (fIoU))
             log_string('eval point accuracy: %f' % (total_correct / float(total_seen)))
             log_string('eval point avg class acc: %f' % (
                 np.mean(np.array(total_correct_class) / (np.array(total_seen_class, dtype=np.float) + 1e-6))))
@@ -253,20 +256,20 @@ def main(args):
             log_string(iou_per_class_str)
             log_string('Eval mean loss: %f' % (loss_sum / num_batches))
             log_string('Eval accuracy: %f' % (total_correct / float(total_seen)))
-            if mIoU >= best_iou:
-                best_iou = mIoU
+            if fIoU >= best_iou:
+                best_iou = fIoU
                 logger.info('Save model...')
                 savepath = str(checkpoints_dir) + '/best_model.pth'
                 log_string('Saving at %s' % savepath)
                 state = {
                     'epoch': epoch,
-                    'class_avg_iou': mIoU,
+                    'foreground_iou': fIoU,
                     'model_state_dict': classifier.state_dict(),
                     'optimizer_state_dict': optimizer.state_dict(),
                 }
                 torch.save(state, savepath)
                 log_string('Saving model....')
-            log_string('Best mIoU: %f' % best_iou)
+            log_string('Best fIoU: %f' % best_iou)
         global_epoch += 1
 
 

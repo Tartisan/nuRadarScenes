@@ -1,350 +1,437 @@
-2020-03-18 10:36:19,286 - Model - INFO - PARAMETER ...
-2020-03-18 10:36:19,286 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=10, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=400, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 10:36:55,899 - Model - INFO - The number of training data is: 27318
-2020-03-18 10:36:55,899 - Model - INFO - The number of test data is: 6830
-2020-03-18 10:36:55,916 - Model - INFO - No existing model, starting training from scratch...
-2020-03-18 10:36:55,917 - Model - INFO - **** Epoch 1 (1/10) ****
-2020-03-18 10:36:55,918 - Model - INFO - Learning rate:0.001000
-2020-03-18 10:38:42,465 - Model - INFO - PARAMETER ...
-2020-03-18 10:38:42,465 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=10, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 10:39:18,328 - Model - INFO - The number of training data is: 27318
-2020-03-18 10:39:18,328 - Model - INFO - The number of test data is: 6830
-2020-03-18 10:39:18,344 - Model - INFO - No existing model, starting training from scratch...
-2020-03-18 10:39:18,346 - Model - INFO - **** Epoch 1 (1/10) ****
-2020-03-18 10:39:18,346 - Model - INFO - Learning rate:0.001000
-2020-03-18 10:39:54,531 - Model - INFO - PARAMETER ...
-2020-03-18 10:39:54,531 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=10, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 10:40:31,903 - Model - INFO - The number of training data is: 27318
-2020-03-18 10:40:31,903 - Model - INFO - The number of test data is: 6830
-2020-03-18 10:40:31,920 - Model - INFO - No existing model, starting training from scratch...
-2020-03-18 10:40:31,922 - Model - INFO - **** Epoch 1 (1/10) ****
-2020-03-18 10:40:31,922 - Model - INFO - Learning rate:0.001000
-2020-03-18 10:41:28,863 - Model - INFO - PARAMETER ...
-2020-03-18 10:41:28,863 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=10, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 10:42:05,963 - Model - INFO - The number of training data is: 27318
-2020-03-18 10:42:05,963 - Model - INFO - The number of test data is: 6830
-2020-03-18 10:42:05,984 - Model - INFO - No existing model, starting training from scratch...
-2020-03-18 10:42:05,987 - Model - INFO - **** Epoch 1 (1/10) ****
-2020-03-18 10:42:05,987 - Model - INFO - Learning rate:0.001000
-2020-03-18 11:58:26,103 - Model - INFO - PARAMETER ...
-2020-03-18 11:58:26,103 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=10, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 11:59:03,379 - Model - INFO - The number of training data is: 27318
-2020-03-18 11:59:03,380 - Model - INFO - The number of test data is: 6830
-2020-03-18 11:59:03,397 - Model - INFO - No existing model, starting training from scratch...
-2020-03-18 11:59:03,398 - Model - INFO - **** Epoch 1 (1/10) ****
-2020-03-18 11:59:03,399 - Model - INFO - Learning rate:0.001000
-2020-03-18 12:05:08,597 - Model - INFO - PARAMETER ...
-2020-03-18 12:05:08,597 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=10, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 12:05:45,959 - Model - INFO - The number of training data is: 27318
-2020-03-18 12:05:45,959 - Model - INFO - The number of test data is: 6830
-2020-03-18 12:05:45,978 - Model - INFO - No existing model, starting training from scratch...
-2020-03-18 12:05:45,980 - Model - INFO - **** Epoch 1 (1/10) ****
-2020-03-18 12:05:45,980 - Model - INFO - Learning rate:0.001000
-2020-03-18 12:21:07,960 - Model - INFO - PARAMETER ...
-2020-03-18 12:21:07,960 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=10, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 12:21:45,949 - Model - INFO - The number of training data is: 27318
-2020-03-18 12:21:45,949 - Model - INFO - The number of test data is: 6830
-2020-03-18 12:21:45,965 - Model - INFO - No existing model, starting training from scratch...
-2020-03-18 12:21:45,967 - Model - INFO - **** Epoch 1 (1/10) ****
-2020-03-18 12:21:45,967 - Model - INFO - Learning rate:0.001000
-2020-03-18 12:27:45,439 - Model - INFO - PARAMETER ...
-2020-03-18 12:27:45,440 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=10, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 12:28:23,383 - Model - INFO - The number of training data is: 27318
-2020-03-18 12:28:23,383 - Model - INFO - The number of test data is: 6830
-2020-03-18 12:28:23,399 - Model - INFO - No existing model, starting training from scratch...
-2020-03-18 12:28:23,400 - Model - INFO - **** Epoch 1 (1/10) ****
-2020-03-18 12:28:23,400 - Model - INFO - Learning rate:0.001000
-2020-03-18 12:45:53,357 - Model - INFO - PARAMETER ...
-2020-03-18 12:45:53,357 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=10, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 12:46:31,191 - Model - INFO - The number of training data is: 27318
-2020-03-18 12:46:31,191 - Model - INFO - The number of test data is: 6830
-2020-03-18 12:46:31,207 - Model - INFO - No existing model, starting training from scratch...
-2020-03-18 12:46:31,209 - Model - INFO - **** Epoch 1 (1/10) ****
-2020-03-18 12:46:31,209 - Model - INFO - Learning rate:0.001000
-2020-03-18 12:54:18,134 - Model - INFO - PARAMETER ...
-2020-03-18 12:54:18,134 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=10, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 13:03:14,070 - Model - INFO - PARAMETER ...
-2020-03-18 13:03:14,070 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=10, gpu='-1', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 13:03:51,889 - Model - INFO - The number of training data is: 27318
-2020-03-18 13:03:51,889 - Model - INFO - The number of test data is: 6830
-2020-03-18 13:03:51,905 - Model - INFO - No existing model, starting training from scratch...
-2020-03-18 13:03:51,907 - Model - INFO - **** Epoch 1 (1/10) ****
-2020-03-18 13:03:51,907 - Model - INFO - Learning rate:0.001000
-2020-03-18 13:05:56,768 - Model - INFO - PARAMETER ...
-2020-03-18 13:05:56,768 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=10, gpu='-1', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 13:11:35,073 - Model - INFO - PARAMETER ...
-2020-03-18 13:11:35,073 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=10, gpu='-1', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 13:12:10,821 - Model - INFO - The number of training data is: 27318
-2020-03-18 13:12:10,821 - Model - INFO - The number of test data is: 6830
-2020-03-18 13:12:10,833 - Model - INFO - No existing model, starting training from scratch...
-2020-03-18 13:12:10,836 - Model - INFO - **** Epoch 1 (1/10) ****
-2020-03-18 13:12:10,837 - Model - INFO - Learning rate:0.001000
-2020-03-18 13:35:22,051 - Model - INFO - PARAMETER ...
-2020-03-18 13:35:22,052 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=10, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 13:39:09,258 - Model - INFO - PARAMETER ...
-2020-03-18 13:39:09,258 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=10, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-18 13:44:49,892 - Model - INFO - The number of training data is: 27318
-2020-03-18 13:44:49,892 - Model - INFO - The number of test data is: 6830
-2020-03-18 13:44:49,915 - Model - INFO - No existing model, starting training from scratch...
-2020-03-18 13:44:49,918 - Model - INFO - **** Epoch 1 (1/10) ****
-2020-03-18 13:44:49,918 - Model - INFO - Learning rate:0.001000
-2020-03-18 13:58:35,885 - Model - INFO - Training mean loss: 0.400446
-2020-03-18 13:58:35,885 - Model - INFO - Training accuracy: 0.897586
-2020-03-18 13:58:35,885 - Model - INFO - Save model...
-2020-03-18 13:58:35,885 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
-2020-03-18 13:58:35,907 - Model - INFO - Saving model....
-2020-03-18 13:58:35,977 - Model - INFO - ---- EPOCH 001 EVALUATION ----
-2020-03-18 14:00:56,305 - Model - INFO - eval mean loss: 0.301304
-2020-03-18 14:00:56,305 - Model - INFO - eval point avg class IoU: 0.581903
-2020-03-18 14:00:56,305 - Model - INFO - eval point accuracy: 0.928213
-2020-03-18 14:00:56,305 - Model - INFO - eval point avg class acc: 0.674230
-2020-03-18 14:00:56,306 - Model - INFO - ------- IoU --------
-class background     weight: 0.058, IoU: 0.927 
-class foreground     weight: 0.942, IoU: 0.237 
+2020-03-25 04:13:35,122 - Model - INFO - PARAMETER ...
+2020-03-25 04:13:35,122 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=100, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
+2020-03-25 04:14:11,012 - Model - INFO - The number of training data is: 27318
+2020-03-25 04:14:11,012 - Model - INFO - The number of test data is: 6830
+2020-03-25 04:14:11,028 - Model - INFO - No existing model, starting training from scratch...
+2020-03-25 04:14:11,030 - Model - INFO - **** Epoch 1 (1/100) ****
+2020-03-25 04:14:11,030 - Model - INFO - Learning rate:0.001000
+2020-03-25 04:27:40,611 - Model - INFO - Training mean loss: 0.471927
+2020-03-25 04:27:40,612 - Model - INFO - Training accuracy: 0.872441
+2020-03-25 04:27:40,612 - Model - INFO - Save model...
+2020-03-25 04:27:40,612 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
+2020-03-25 04:27:40,635 - Model - INFO - Saving model....
+2020-03-25 04:27:40,707 - Model - INFO - ---- EPOCH 001 EVALUATION ----
+2020-03-25 04:29:57,453 - Model - INFO - eval mean loss: 0.395868
+2020-03-25 04:29:57,453 - Model - INFO - eval point avg class IoU: 0.541501
+2020-03-25 04:29:57,453 - Model - INFO - eval point foreground IoU: 0.176189
+2020-03-25 04:29:57,453 - Model - INFO - eval point accuracy: 0.908634
+2020-03-25 04:29:57,453 - Model - INFO - eval point avg class acc: 0.640993
+2020-03-25 04:29:57,453 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.907 
+class foreground     weight: 0.942, IoU: 0.176 
 
-2020-03-18 14:00:56,306 - Model - INFO - Eval mean loss: 0.301304
-2020-03-18 14:00:56,306 - Model - INFO - Eval accuracy: 0.928213
-2020-03-18 14:00:56,306 - Model - INFO - Save model...
-2020-03-18 14:00:56,306 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
-2020-03-18 14:00:56,327 - Model - INFO - Saving model....
-2020-03-18 14:00:56,327 - Model - INFO - Best mIoU: 0.581903
-2020-03-18 14:00:56,327 - Model - INFO - **** Epoch 2 (2/10) ****
-2020-03-18 14:00:56,327 - Model - INFO - Learning rate:0.001000
-2020-03-18 14:14:43,562 - Model - INFO - Training mean loss: 0.373682
-2020-03-18 14:14:43,563 - Model - INFO - Training accuracy: 0.907272
-2020-03-18 14:14:43,634 - Model - INFO - ---- EPOCH 002 EVALUATION ----
-2020-03-18 14:17:03,712 - Model - INFO - eval mean loss: 0.280153
-2020-03-18 14:17:03,712 - Model - INFO - eval point avg class IoU: 0.602584
-2020-03-18 14:17:03,712 - Model - INFO - eval point accuracy: 0.942224
-2020-03-18 14:17:03,712 - Model - INFO - eval point avg class acc: 0.668767
-2020-03-18 14:17:03,712 - Model - INFO - ------- IoU --------
-class background     weight: 0.058, IoU: 0.941 
-class foreground     weight: 0.942, IoU: 0.264 
+2020-03-25 04:29:57,454 - Model - INFO - Eval mean loss: 0.395868
+2020-03-25 04:29:57,454 - Model - INFO - Eval accuracy: 0.908634
+2020-03-25 04:29:57,454 - Model - INFO - Save model...
+2020-03-25 04:29:57,454 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2020-03-25 04:29:57,475 - Model - INFO - Saving model....
+2020-03-25 04:29:57,475 - Model - INFO - Best fIoU: 0.176189
+2020-03-25 04:29:57,475 - Model - INFO - **** Epoch 2 (2/100) ****
+2020-03-25 04:29:57,475 - Model - INFO - Learning rate:0.001000
+2020-03-25 04:43:28,284 - Model - INFO - Training mean loss: 0.461805
+2020-03-25 04:43:28,285 - Model - INFO - Training accuracy: 0.880830
+2020-03-25 04:43:28,356 - Model - INFO - ---- EPOCH 002 EVALUATION ----
+2020-03-25 04:45:45,464 - Model - INFO - eval mean loss: 0.386203
+2020-03-25 04:45:45,464 - Model - INFO - eval point avg class IoU: 0.545904
+2020-03-25 04:45:45,464 - Model - INFO - eval point foreground IoU: 0.181041
+2020-03-25 04:45:45,464 - Model - INFO - eval point accuracy: 0.912492
+2020-03-25 04:45:45,464 - Model - INFO - eval point avg class acc: 0.641450
+2020-03-25 04:45:45,464 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.911 
+class foreground     weight: 0.942, IoU: 0.181 
 
-2020-03-18 14:17:03,712 - Model - INFO - Eval mean loss: 0.280153
-2020-03-18 14:17:03,713 - Model - INFO - Eval accuracy: 0.942224
-2020-03-18 14:17:03,713 - Model - INFO - Save model...
-2020-03-18 14:17:03,713 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
-2020-03-18 14:17:03,762 - Model - INFO - Saving model....
-2020-03-18 14:17:03,762 - Model - INFO - Best mIoU: 0.602584
-2020-03-18 14:17:03,762 - Model - INFO - **** Epoch 3 (3/10) ****
-2020-03-18 14:17:03,762 - Model - INFO - Learning rate:0.001000
-2020-03-18 14:30:50,428 - Model - INFO - Training mean loss: 0.357620
-2020-03-18 14:30:50,428 - Model - INFO - Training accuracy: 0.913680
-2020-03-18 14:30:50,500 - Model - INFO - ---- EPOCH 003 EVALUATION ----
-2020-03-18 14:33:10,610 - Model - INFO - eval mean loss: 0.254271
-2020-03-18 14:33:10,610 - Model - INFO - eval point avg class IoU: 0.659671
-2020-03-18 14:33:10,610 - Model - INFO - eval point accuracy: 0.952181
-2020-03-18 14:33:10,610 - Model - INFO - eval point avg class acc: 0.732373
-2020-03-18 14:33:10,610 - Model - INFO - ------- IoU --------
-class background     weight: 0.058, IoU: 0.951 
-class foreground     weight: 0.942, IoU: 0.369 
+2020-03-25 04:45:45,464 - Model - INFO - Eval mean loss: 0.386203
+2020-03-25 04:45:45,464 - Model - INFO - Eval accuracy: 0.912492
+2020-03-25 04:45:45,464 - Model - INFO - Save model...
+2020-03-25 04:45:45,464 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2020-03-25 04:45:45,515 - Model - INFO - Saving model....
+2020-03-25 04:45:45,515 - Model - INFO - Best fIoU: 0.181041
+2020-03-25 04:45:45,515 - Model - INFO - **** Epoch 3 (3/100) ****
+2020-03-25 04:45:45,515 - Model - INFO - Learning rate:0.001000
+2020-03-25 04:59:15,564 - Model - INFO - Training mean loss: 0.454700
+2020-03-25 04:59:15,564 - Model - INFO - Training accuracy: 0.885049
+2020-03-25 04:59:15,690 - Model - INFO - ---- EPOCH 003 EVALUATION ----
+2020-03-25 05:01:32,443 - Model - INFO - eval mean loss: 0.406879
+2020-03-25 05:01:32,443 - Model - INFO - eval point avg class IoU: 0.562568
+2020-03-25 05:01:32,443 - Model - INFO - eval point foreground IoU: 0.202650
+2020-03-25 05:01:32,443 - Model - INFO - eval point accuracy: 0.923984
+2020-03-25 05:01:32,443 - Model - INFO - eval point avg class acc: 0.647345
+2020-03-25 05:01:32,443 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.922 
+class foreground     weight: 0.942, IoU: 0.203 
 
-2020-03-18 14:33:10,610 - Model - INFO - Eval mean loss: 0.254271
-2020-03-18 14:33:10,610 - Model - INFO - Eval accuracy: 0.952181
-2020-03-18 14:33:10,611 - Model - INFO - Save model...
-2020-03-18 14:33:10,611 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
-2020-03-18 14:33:10,650 - Model - INFO - Saving model....
-2020-03-18 14:33:10,650 - Model - INFO - Best mIoU: 0.659671
-2020-03-18 14:33:10,650 - Model - INFO - **** Epoch 4 (4/10) ****
-2020-03-18 14:33:10,650 - Model - INFO - Learning rate:0.001000
-2020-03-18 14:46:56,188 - Model - INFO - Training mean loss: 0.353511
-2020-03-18 14:46:56,188 - Model - INFO - Training accuracy: 0.915221
-2020-03-18 14:46:56,261 - Model - INFO - ---- EPOCH 004 EVALUATION ----
-2020-03-18 14:49:16,534 - Model - INFO - eval mean loss: 0.350869
-2020-03-18 14:49:16,534 - Model - INFO - eval point avg class IoU: 0.471164
-2020-03-18 14:49:16,534 - Model - INFO - eval point accuracy: 0.942328
-2020-03-18 14:49:16,534 - Model - INFO - eval point avg class acc: 0.500000
-2020-03-18 14:49:16,534 - Model - INFO - ------- IoU --------
+2020-03-25 05:01:32,443 - Model - INFO - Eval mean loss: 0.406879
+2020-03-25 05:01:32,443 - Model - INFO - Eval accuracy: 0.923984
+2020-03-25 05:01:32,443 - Model - INFO - Save model...
+2020-03-25 05:01:32,443 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2020-03-25 05:01:32,485 - Model - INFO - Saving model....
+2020-03-25 05:01:32,485 - Model - INFO - Best fIoU: 0.202650
+2020-03-25 05:01:32,485 - Model - INFO - **** Epoch 4 (4/100) ****
+2020-03-25 05:01:32,485 - Model - INFO - Learning rate:0.001000
+2020-03-25 05:15:02,823 - Model - INFO - Training mean loss: 0.444198
+2020-03-25 05:15:02,824 - Model - INFO - Training accuracy: 0.889304
+2020-03-25 05:15:02,895 - Model - INFO - ---- EPOCH 004 EVALUATION ----
+2020-03-25 05:17:20,365 - Model - INFO - eval mean loss: 0.360504
+2020-03-25 05:17:20,365 - Model - INFO - eval point avg class IoU: 0.573262
+2020-03-25 05:17:20,365 - Model - INFO - eval point foreground IoU: 0.235336
+2020-03-25 05:17:20,365 - Model - INFO - eval point accuracy: 0.913552
+2020-03-25 05:17:20,365 - Model - INFO - eval point avg class acc: 0.701032
+2020-03-25 05:17:20,365 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.911 
+class foreground     weight: 0.942, IoU: 0.235 
+
+2020-03-25 05:17:20,366 - Model - INFO - Eval mean loss: 0.360504
+2020-03-25 05:17:20,366 - Model - INFO - Eval accuracy: 0.913552
+2020-03-25 05:17:20,366 - Model - INFO - Save model...
+2020-03-25 05:17:20,366 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2020-03-25 05:17:20,408 - Model - INFO - Saving model....
+2020-03-25 05:17:20,408 - Model - INFO - Best fIoU: 0.235336
+2020-03-25 05:17:20,408 - Model - INFO - **** Epoch 5 (5/100) ****
+2020-03-25 05:17:20,408 - Model - INFO - Learning rate:0.001000
+2020-03-25 05:30:49,663 - Model - INFO - Training mean loss: 0.433418
+2020-03-25 05:30:49,663 - Model - INFO - Training accuracy: 0.892938
+2020-03-25 05:30:49,735 - Model - INFO - ---- EPOCH 005 EVALUATION ----
+2020-03-25 05:33:06,822 - Model - INFO - eval mean loss: 0.342991
+2020-03-25 05:33:06,822 - Model - INFO - eval point avg class IoU: 0.593452
+2020-03-25 05:33:06,822 - Model - INFO - eval point foreground IoU: 0.266570
+2020-03-25 05:33:06,822 - Model - INFO - eval point accuracy: 0.922576
+2020-03-25 05:33:06,822 - Model - INFO - eval point avg class acc: 0.718296
+2020-03-25 05:33:06,822 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.920 
+class foreground     weight: 0.942, IoU: 0.267 
+
+2020-03-25 05:33:06,822 - Model - INFO - Eval mean loss: 0.342991
+2020-03-25 05:33:06,823 - Model - INFO - Eval accuracy: 0.922576
+2020-03-25 05:33:06,823 - Model - INFO - Save model...
+2020-03-25 05:33:06,823 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2020-03-25 05:33:06,862 - Model - INFO - Saving model....
+2020-03-25 05:33:06,862 - Model - INFO - Best fIoU: 0.266570
+2020-03-25 05:33:06,862 - Model - INFO - **** Epoch 6 (6/100) ****
+2020-03-25 05:33:06,862 - Model - INFO - Learning rate:0.001000
+2020-03-25 05:46:36,602 - Model - INFO - Training mean loss: 0.424413
+2020-03-25 05:46:36,603 - Model - INFO - Training accuracy: 0.897527
+2020-03-25 05:46:36,603 - Model - INFO - Save model...
+2020-03-25 05:46:36,603 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
+2020-03-25 05:46:36,641 - Model - INFO - Saving model....
+2020-03-25 05:46:36,714 - Model - INFO - ---- EPOCH 006 EVALUATION ----
+2020-03-25 05:48:54,090 - Model - INFO - eval mean loss: 0.544343
+2020-03-25 05:48:54,091 - Model - INFO - eval point avg class IoU: 0.542283
+2020-03-25 05:48:54,091 - Model - INFO - eval point foreground IoU: 0.202556
+2020-03-25 05:48:54,091 - Model - INFO - eval point accuracy: 0.885443
+2020-03-25 05:48:54,091 - Model - INFO - eval point avg class acc: 0.706379
+2020-03-25 05:48:54,091 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.882 
+class foreground     weight: 0.942, IoU: 0.203 
+
+2020-03-25 05:48:54,091 - Model - INFO - Eval mean loss: 0.544343
+2020-03-25 05:48:54,091 - Model - INFO - Eval accuracy: 0.885443
+2020-03-25 05:48:54,091 - Model - INFO - Best fIoU: 0.266570
+2020-03-25 05:48:54,091 - Model - INFO - **** Epoch 7 (7/100) ****
+2020-03-25 05:48:54,091 - Model - INFO - Learning rate:0.001000
+2020-03-25 06:02:24,321 - Model - INFO - Training mean loss: 0.417861
+2020-03-25 06:02:24,322 - Model - INFO - Training accuracy: 0.901780
+2020-03-25 06:02:24,393 - Model - INFO - ---- EPOCH 007 EVALUATION ----
+2020-03-25 06:04:40,890 - Model - INFO - eval mean loss: 0.317770
+2020-03-25 06:04:40,891 - Model - INFO - eval point avg class IoU: 0.636294
+2020-03-25 06:04:40,891 - Model - INFO - eval point foreground IoU: 0.330293
+2020-03-25 06:04:40,891 - Model - INFO - eval point accuracy: 0.943893
+2020-03-25 06:04:40,891 - Model - INFO - eval point avg class acc: 0.725797
+2020-03-25 06:04:40,891 - Model - INFO - ------- IoU --------
 class background     weight: 0.058, IoU: 0.942 
-class foreground     weight: 0.942, IoU: 0.000 
+class foreground     weight: 0.942, IoU: 0.330 
 
-2020-03-18 14:49:16,534 - Model - INFO - Eval mean loss: 0.350869
-2020-03-18 14:49:16,534 - Model - INFO - Eval accuracy: 0.942328
-2020-03-18 14:49:16,535 - Model - INFO - Best mIoU: 0.659671
-2020-03-18 14:49:16,535 - Model - INFO - **** Epoch 5 (5/10) ****
-2020-03-18 14:49:16,535 - Model - INFO - Learning rate:0.001000
-2020-03-18 15:03:03,093 - Model - INFO - Training mean loss: 0.364103
-2020-03-18 15:03:03,093 - Model - INFO - Training accuracy: 0.912133
-2020-03-18 15:03:03,165 - Model - INFO - ---- EPOCH 005 EVALUATION ----
-2020-03-18 15:05:22,556 - Model - INFO - eval mean loss: 0.247270
-2020-03-18 15:05:22,556 - Model - INFO - eval point avg class IoU: 0.660671
-2020-03-18 15:05:22,556 - Model - INFO - eval point accuracy: 0.952412
-2020-03-18 15:05:22,556 - Model - INFO - eval point avg class acc: 0.733119
-2020-03-18 15:05:22,556 - Model - INFO - ------- IoU --------
-class background     weight: 0.058, IoU: 0.951 
+2020-03-25 06:04:40,891 - Model - INFO - Eval mean loss: 0.317770
+2020-03-25 06:04:40,891 - Model - INFO - Eval accuracy: 0.943893
+2020-03-25 06:04:40,891 - Model - INFO - Save model...
+2020-03-25 06:04:40,891 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2020-03-25 06:04:40,941 - Model - INFO - Saving model....
+2020-03-25 06:04:40,941 - Model - INFO - Best fIoU: 0.330293
+2020-03-25 06:04:40,941 - Model - INFO - **** Epoch 8 (8/100) ****
+2020-03-25 06:04:40,941 - Model - INFO - Learning rate:0.001000
+2020-03-25 06:18:11,789 - Model - INFO - Training mean loss: 0.409437
+2020-03-25 06:18:11,789 - Model - INFO - Training accuracy: 0.904907
+2020-03-25 06:18:11,860 - Model - INFO - ---- EPOCH 008 EVALUATION ----
+2020-03-25 06:20:28,868 - Model - INFO - eval mean loss: 0.305795
+2020-03-25 06:20:28,869 - Model - INFO - eval point avg class IoU: 0.640041
+2020-03-25 06:20:28,869 - Model - INFO - eval point foreground IoU: 0.345985
+2020-03-25 06:20:28,869 - Model - INFO - eval point accuracy: 0.936317
+2020-03-25 06:20:28,869 - Model - INFO - eval point avg class acc: 0.770691
+2020-03-25 06:20:28,869 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.934 
+class foreground     weight: 0.942, IoU: 0.346 
+
+2020-03-25 06:20:28,869 - Model - INFO - Eval mean loss: 0.305795
+2020-03-25 06:20:28,869 - Model - INFO - Eval accuracy: 0.936317
+2020-03-25 06:20:28,869 - Model - INFO - Save model...
+2020-03-25 06:20:28,869 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2020-03-25 06:20:28,914 - Model - INFO - Saving model....
+2020-03-25 06:20:28,914 - Model - INFO - Best fIoU: 0.345985
+2020-03-25 06:20:28,914 - Model - INFO - **** Epoch 9 (9/100) ****
+2020-03-25 06:20:28,914 - Model - INFO - Learning rate:0.001000
+2020-03-25 06:33:59,054 - Model - INFO - Training mean loss: 0.406568
+2020-03-25 06:33:59,054 - Model - INFO - Training accuracy: 0.905554
+2020-03-25 06:33:59,126 - Model - INFO - ---- EPOCH 009 EVALUATION ----
+2020-03-25 06:36:16,738 - Model - INFO - eval mean loss: 0.304123
+2020-03-25 06:36:16,738 - Model - INFO - eval point avg class IoU: 0.639683
+2020-03-25 06:36:16,739 - Model - INFO - eval point foreground IoU: 0.344797
+2020-03-25 06:36:16,739 - Model - INFO - eval point accuracy: 0.936748
+2020-03-25 06:36:16,739 - Model - INFO - eval point avg class acc: 0.767645
+2020-03-25 06:36:16,739 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.935 
+class foreground     weight: 0.942, IoU: 0.345 
+
+2020-03-25 06:36:16,739 - Model - INFO - Eval mean loss: 0.304123
+2020-03-25 06:36:16,739 - Model - INFO - Eval accuracy: 0.936748
+2020-03-25 06:36:16,739 - Model - INFO - Best fIoU: 0.345985
+2020-03-25 06:36:16,739 - Model - INFO - **** Epoch 10 (10/100) ****
+2020-03-25 06:36:16,739 - Model - INFO - Learning rate:0.001000
+2020-03-25 06:49:46,832 - Model - INFO - Training mean loss: 0.404198
+2020-03-25 06:49:46,833 - Model - INFO - Training accuracy: 0.905979
+2020-03-25 06:49:46,903 - Model - INFO - ---- EPOCH 010 EVALUATION ----
+2020-03-25 06:52:04,236 - Model - INFO - eval mean loss: 0.299816
+2020-03-25 06:52:04,236 - Model - INFO - eval point avg class IoU: 0.630499
+2020-03-25 06:52:04,236 - Model - INFO - eval point foreground IoU: 0.332581
+2020-03-25 06:52:04,236 - Model - INFO - eval point accuracy: 0.930882
+2020-03-25 06:52:04,236 - Model - INFO - eval point avg class acc: 0.773926
+2020-03-25 06:52:04,236 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.928 
+class foreground     weight: 0.942, IoU: 0.333 
+
+2020-03-25 06:52:04,236 - Model - INFO - Eval mean loss: 0.299816
+2020-03-25 06:52:04,236 - Model - INFO - Eval accuracy: 0.930882
+2020-03-25 06:52:04,236 - Model - INFO - Best fIoU: 0.345985
+2020-03-25 06:52:04,237 - Model - INFO - **** Epoch 11 (11/100) ****
+2020-03-25 06:52:04,237 - Model - INFO - Learning rate:0.000700
+2020-03-25 07:05:33,967 - Model - INFO - Training mean loss: 0.398583
+2020-03-25 07:05:33,968 - Model - INFO - Training accuracy: 0.906894
+2020-03-25 07:05:33,968 - Model - INFO - Save model...
+2020-03-25 07:05:33,968 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
+2020-03-25 07:05:34,022 - Model - INFO - Saving model....
+2020-03-25 07:05:34,115 - Model - INFO - ---- EPOCH 011 EVALUATION ----
+2020-03-25 07:07:50,627 - Model - INFO - eval mean loss: 0.331269
+2020-03-25 07:07:50,627 - Model - INFO - eval point avg class IoU: 0.633270
+2020-03-25 07:07:50,628 - Model - INFO - eval point foreground IoU: 0.316387
+2020-03-25 07:07:50,628 - Model - INFO - eval point accuracy: 0.951276
+2020-03-25 07:07:50,628 - Model - INFO - eval point avg class acc: 0.688085
+2020-03-25 07:07:50,628 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.950 
+class foreground     weight: 0.942, IoU: 0.316 
+
+2020-03-25 07:07:50,628 - Model - INFO - Eval mean loss: 0.331269
+2020-03-25 07:07:50,628 - Model - INFO - Eval accuracy: 0.951276
+2020-03-25 07:07:50,628 - Model - INFO - Best fIoU: 0.345985
+2020-03-25 07:07:50,628 - Model - INFO - **** Epoch 12 (12/100) ****
+2020-03-25 07:07:50,628 - Model - INFO - Learning rate:0.000700
+2020-03-25 07:21:23,060 - Model - INFO - Training mean loss: 0.398559
+2020-03-25 07:21:23,060 - Model - INFO - Training accuracy: 0.907081
+2020-03-25 07:21:23,132 - Model - INFO - ---- EPOCH 012 EVALUATION ----
+2020-03-25 07:23:42,654 - Model - INFO - eval mean loss: 0.297156
+2020-03-25 07:23:42,655 - Model - INFO - eval point avg class IoU: 0.635769
+2020-03-25 07:23:42,655 - Model - INFO - eval point foreground IoU: 0.341079
+2020-03-25 07:23:42,655 - Model - INFO - eval point accuracy: 0.932875
+2020-03-25 07:23:42,655 - Model - INFO - eval point avg class acc: 0.777457
+2020-03-25 07:23:42,655 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.930 
+class foreground     weight: 0.942, IoU: 0.341 
+
+2020-03-25 07:23:42,655 - Model - INFO - Eval mean loss: 0.297156
+2020-03-25 07:23:42,655 - Model - INFO - Eval accuracy: 0.932875
+2020-03-25 07:23:42,655 - Model - INFO - Best fIoU: 0.345985
+2020-03-25 07:23:42,655 - Model - INFO - **** Epoch 13 (13/100) ****
+2020-03-25 07:23:42,655 - Model - INFO - Learning rate:0.000700
+2020-03-25 07:37:24,236 - Model - INFO - Training mean loss: 0.396683
+2020-03-25 07:37:24,236 - Model - INFO - Training accuracy: 0.907292
+2020-03-25 07:37:24,307 - Model - INFO - ---- EPOCH 013 EVALUATION ----
+2020-03-25 07:39:44,221 - Model - INFO - eval mean loss: 0.283810
+2020-03-25 07:39:44,221 - Model - INFO - eval point avg class IoU: 0.655869
+2020-03-25 07:39:44,221 - Model - INFO - eval point foreground IoU: 0.369650
+2020-03-25 07:39:44,221 - Model - INFO - eval point accuracy: 0.943990
+2020-03-25 07:39:44,222 - Model - INFO - eval point avg class acc: 0.767905
+2020-03-25 07:39:44,222 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.942 
 class foreground     weight: 0.942, IoU: 0.370 
 
-2020-03-18 15:05:22,556 - Model - INFO - Eval mean loss: 0.247270
-2020-03-18 15:05:22,556 - Model - INFO - Eval accuracy: 0.952412
-2020-03-18 15:05:22,556 - Model - INFO - Save model...
-2020-03-18 15:05:22,556 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
-2020-03-18 15:05:22,590 - Model - INFO - Saving model....
-2020-03-18 15:05:22,590 - Model - INFO - Best mIoU: 0.660671
-2020-03-18 15:05:22,590 - Model - INFO - **** Epoch 6 (6/10) ****
-2020-03-18 15:05:22,590 - Model - INFO - Learning rate:0.001000
-2020-03-18 15:19:08,398 - Model - INFO - Training mean loss: 0.351025
-2020-03-18 15:19:08,398 - Model - INFO - Training accuracy: 0.916150
-2020-03-18 15:19:08,398 - Model - INFO - Save model...
-2020-03-18 15:19:08,398 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
-2020-03-18 15:19:08,437 - Model - INFO - Saving model....
-2020-03-18 15:19:08,509 - Model - INFO - ---- EPOCH 006 EVALUATION ----
-2020-03-18 15:21:28,393 - Model - INFO - eval mean loss: 0.346862
-2020-03-18 15:21:28,393 - Model - INFO - eval point avg class IoU: 0.471164
-2020-03-18 15:21:28,393 - Model - INFO - eval point accuracy: 0.942328
-2020-03-18 15:21:28,393 - Model - INFO - eval point avg class acc: 0.500000
-2020-03-18 15:21:28,393 - Model - INFO - ------- IoU --------
+2020-03-25 07:39:44,222 - Model - INFO - Eval mean loss: 0.283810
+2020-03-25 07:39:44,222 - Model - INFO - Eval accuracy: 0.943990
+2020-03-25 07:39:44,222 - Model - INFO - Save model...
+2020-03-25 07:39:44,222 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2020-03-25 07:39:44,266 - Model - INFO - Saving model....
+2020-03-25 07:39:44,267 - Model - INFO - Best fIoU: 0.369650
+2020-03-25 07:39:44,267 - Model - INFO - **** Epoch 14 (14/100) ****
+2020-03-25 07:39:44,267 - Model - INFO - Learning rate:0.000700
+2020-03-25 07:53:26,589 - Model - INFO - Training mean loss: 0.395810
+2020-03-25 07:53:26,590 - Model - INFO - Training accuracy: 0.907529
+2020-03-25 07:53:26,662 - Model - INFO - ---- EPOCH 014 EVALUATION ----
+2020-03-25 07:55:47,853 - Model - INFO - eval mean loss: 0.550650
+2020-03-25 07:55:47,854 - Model - INFO - eval point avg class IoU: 0.471129
+2020-03-25 07:55:47,854 - Model - INFO - eval point foreground IoU: 0.000000
+2020-03-25 07:55:47,854 - Model - INFO - eval point accuracy: 0.942258
+2020-03-25 07:55:47,854 - Model - INFO - eval point avg class acc: 0.500000
+2020-03-25 07:55:47,854 - Model - INFO - ------- IoU --------
 class background     weight: 0.058, IoU: 0.942 
 class foreground     weight: 0.942, IoU: 0.000 
 
-2020-03-18 15:21:28,394 - Model - INFO - Eval mean loss: 0.346862
-2020-03-18 15:21:28,394 - Model - INFO - Eval accuracy: 0.942328
-2020-03-18 15:21:28,394 - Model - INFO - Best mIoU: 0.660671
-2020-03-18 15:21:28,394 - Model - INFO - **** Epoch 7 (7/10) ****
-2020-03-18 15:21:28,394 - Model - INFO - Learning rate:0.001000
-2020-03-18 15:35:14,103 - Model - INFO - Training mean loss: 0.347904
-2020-03-18 15:35:14,103 - Model - INFO - Training accuracy: 0.916177
-2020-03-18 15:35:14,175 - Model - INFO - ---- EPOCH 007 EVALUATION ----
-2020-03-18 15:37:34,505 - Model - INFO - eval mean loss: 0.350114
-2020-03-18 15:37:34,505 - Model - INFO - eval point avg class IoU: 0.471164
-2020-03-18 15:37:34,505 - Model - INFO - eval point accuracy: 0.942328
-2020-03-18 15:37:34,505 - Model - INFO - eval point avg class acc: 0.500000
-2020-03-18 15:37:34,505 - Model - INFO - ------- IoU --------
+2020-03-25 07:55:47,854 - Model - INFO - Eval mean loss: 0.550650
+2020-03-25 07:55:47,854 - Model - INFO - Eval accuracy: 0.942258
+2020-03-25 07:55:47,854 - Model - INFO - Best fIoU: 0.369650
+2020-03-25 07:55:47,854 - Model - INFO - **** Epoch 15 (15/100) ****
+2020-03-25 07:55:47,854 - Model - INFO - Learning rate:0.000700
+2020-03-25 08:09:29,340 - Model - INFO - Training mean loss: 0.398334
+2020-03-25 08:09:29,340 - Model - INFO - Training accuracy: 0.906962
+2020-03-25 08:09:29,413 - Model - INFO - ---- EPOCH 015 EVALUATION ----
+2020-03-25 08:11:49,489 - Model - INFO - eval mean loss: 0.395768
+2020-03-25 08:11:49,489 - Model - INFO - eval point avg class IoU: 0.471128
+2020-03-25 08:11:49,489 - Model - INFO - eval point foreground IoU: 0.000000
+2020-03-25 08:11:49,489 - Model - INFO - eval point accuracy: 0.942257
+2020-03-25 08:11:49,489 - Model - INFO - eval point avg class acc: 0.499999
+2020-03-25 08:11:49,489 - Model - INFO - ------- IoU --------
 class background     weight: 0.058, IoU: 0.942 
 class foreground     weight: 0.942, IoU: 0.000 
 
-2020-03-18 15:37:34,505 - Model - INFO - Eval mean loss: 0.350114
-2020-03-18 15:37:34,506 - Model - INFO - Eval accuracy: 0.942328
-2020-03-18 15:37:34,506 - Model - INFO - Best mIoU: 0.660671
-2020-03-18 15:37:34,506 - Model - INFO - **** Epoch 8 (8/10) ****
-2020-03-18 15:37:34,506 - Model - INFO - Learning rate:0.001000
-2020-03-18 15:51:20,384 - Model - INFO - Training mean loss: 0.345303
-2020-03-18 15:51:20,384 - Model - INFO - Training accuracy: 0.916853
-2020-03-18 15:51:20,455 - Model - INFO - ---- EPOCH 008 EVALUATION ----
-2020-03-18 15:53:40,400 - Model - INFO - eval mean loss: 0.263249
-2020-03-18 15:53:40,400 - Model - INFO - eval point avg class IoU: 0.602443
-2020-03-18 15:53:40,400 - Model - INFO - eval point accuracy: 0.953489
-2020-03-18 15:53:40,400 - Model - INFO - eval point avg class acc: 0.633553
-2020-03-18 15:53:40,400 - Model - INFO - ------- IoU --------
-class background     weight: 0.058, IoU: 0.953 
-class foreground     weight: 0.942, IoU: 0.252 
+2020-03-25 08:11:49,489 - Model - INFO - Eval mean loss: 0.395768
+2020-03-25 08:11:49,489 - Model - INFO - Eval accuracy: 0.942257
+2020-03-25 08:11:49,489 - Model - INFO - Best fIoU: 0.369650
+2020-03-25 08:11:49,489 - Model - INFO - **** Epoch 16 (16/100) ****
+2020-03-25 08:11:49,489 - Model - INFO - Learning rate:0.000700
+2020-03-25 08:25:30,835 - Model - INFO - Training mean loss: 0.397117
+2020-03-25 08:25:30,835 - Model - INFO - Training accuracy: 0.907590
+2020-03-25 08:25:30,835 - Model - INFO - Save model...
+2020-03-25 08:25:30,835 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
+2020-03-25 08:25:30,879 - Model - INFO - Saving model....
+2020-03-25 08:25:30,952 - Model - INFO - ---- EPOCH 016 EVALUATION ----
+2020-03-25 08:27:50,779 - Model - INFO - eval mean loss: 0.290771
+2020-03-25 08:27:50,779 - Model - INFO - eval point avg class IoU: 0.655569
+2020-03-25 08:27:50,779 - Model - INFO - eval point foreground IoU: 0.370169
+2020-03-25 08:27:50,779 - Model - INFO - eval point accuracy: 0.942948
+2020-03-25 08:27:50,779 - Model - INFO - eval point avg class acc: 0.772924
+2020-03-25 08:27:50,779 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.941 
+class foreground     weight: 0.942, IoU: 0.370 
 
-2020-03-18 15:53:40,400 - Model - INFO - Eval mean loss: 0.263249
-2020-03-18 15:53:40,400 - Model - INFO - Eval accuracy: 0.953489
-2020-03-18 15:53:40,400 - Model - INFO - Best mIoU: 0.660671
-2020-03-18 15:53:40,401 - Model - INFO - **** Epoch 9 (9/10) ****
-2020-03-18 15:53:40,401 - Model - INFO - Learning rate:0.001000
-2020-03-18 16:07:26,286 - Model - INFO - Training mean loss: 0.347617
-2020-03-18 16:07:26,286 - Model - INFO - Training accuracy: 0.916317
-2020-03-18 16:07:26,357 - Model - INFO - ---- EPOCH 009 EVALUATION ----
-2020-03-18 16:09:47,046 - Model - INFO - eval mean loss: 0.247246
-2020-03-18 16:09:47,046 - Model - INFO - eval point avg class IoU: 0.658999
-2020-03-18 16:09:47,046 - Model - INFO - eval point accuracy: 0.948763
-2020-03-18 16:09:47,046 - Model - INFO - eval point avg class acc: 0.749206
-2020-03-18 16:09:47,046 - Model - INFO - ------- IoU --------
-class background     weight: 0.058, IoU: 0.947 
-class foreground     weight: 0.942, IoU: 0.371 
+2020-03-25 08:27:50,779 - Model - INFO - Eval mean loss: 0.290771
+2020-03-25 08:27:50,779 - Model - INFO - Eval accuracy: 0.942948
+2020-03-25 08:27:50,780 - Model - INFO - Save model...
+2020-03-25 08:27:50,780 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
+2020-03-25 08:27:50,833 - Model - INFO - Saving model....
+2020-03-25 08:27:50,834 - Model - INFO - Best fIoU: 0.370169
+2020-03-25 08:27:50,834 - Model - INFO - **** Epoch 17 (17/100) ****
+2020-03-25 08:27:50,834 - Model - INFO - Learning rate:0.000700
+2020-03-25 08:41:32,655 - Model - INFO - Training mean loss: 0.397854
+2020-03-25 08:41:32,655 - Model - INFO - Training accuracy: 0.907337
+2020-03-25 08:41:32,727 - Model - INFO - ---- EPOCH 017 EVALUATION ----
+2020-03-25 08:43:52,821 - Model - INFO - eval mean loss: 0.298300
+2020-03-25 08:43:52,821 - Model - INFO - eval point avg class IoU: 0.637174
+2020-03-25 08:43:52,821 - Model - INFO - eval point foreground IoU: 0.343790
+2020-03-25 08:43:52,821 - Model - INFO - eval point accuracy: 0.932995
+2020-03-25 08:43:52,821 - Model - INFO - eval point avg class acc: 0.780428
+2020-03-25 08:43:52,821 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.931 
+class foreground     weight: 0.942, IoU: 0.344 
 
-2020-03-18 16:09:47,046 - Model - INFO - Eval mean loss: 0.247246
-2020-03-18 16:09:47,046 - Model - INFO - Eval accuracy: 0.948763
-2020-03-18 16:09:47,046 - Model - INFO - Best mIoU: 0.660671
-2020-03-18 16:09:47,046 - Model - INFO - **** Epoch 10 (10/10) ****
-2020-03-18 16:09:47,046 - Model - INFO - Learning rate:0.001000
-2020-03-18 16:23:32,939 - Model - INFO - Training mean loss: 0.344623
-2020-03-18 16:23:32,939 - Model - INFO - Training accuracy: 0.916870
-2020-03-18 16:23:33,011 - Model - INFO - ---- EPOCH 010 EVALUATION ----
-2020-03-18 16:25:52,819 - Model - INFO - eval mean loss: 0.245221
-2020-03-18 16:25:52,819 - Model - INFO - eval point avg class IoU: 0.666535
-2020-03-18 16:25:52,819 - Model - INFO - eval point accuracy: 0.955259
-2020-03-18 16:25:52,820 - Model - INFO - eval point avg class acc: 0.729172
-2020-03-18 16:25:52,820 - Model - INFO - ------- IoU --------
-class background     weight: 0.058, IoU: 0.954 
-class foreground     weight: 0.942, IoU: 0.379 
+2020-03-25 08:43:52,821 - Model - INFO - Eval mean loss: 0.298300
+2020-03-25 08:43:52,821 - Model - INFO - Eval accuracy: 0.932995
+2020-03-25 08:43:52,821 - Model - INFO - Best fIoU: 0.370169
+2020-03-25 08:43:52,821 - Model - INFO - **** Epoch 18 (18/100) ****
+2020-03-25 08:43:52,821 - Model - INFO - Learning rate:0.000700
+2020-03-25 08:57:34,603 - Model - INFO - Training mean loss: 0.401520
+2020-03-25 08:57:34,604 - Model - INFO - Training accuracy: 0.905729
+2020-03-25 08:57:34,675 - Model - INFO - ---- EPOCH 018 EVALUATION ----
+2020-03-25 08:59:55,261 - Model - INFO - eval mean loss: 0.303208
+2020-03-25 08:59:55,262 - Model - INFO - eval point avg class IoU: 0.648285
+2020-03-25 08:59:55,262 - Model - INFO - eval point foreground IoU: 0.355459
+2020-03-25 08:59:55,262 - Model - INFO - eval point accuracy: 0.942964
+2020-03-25 08:59:55,262 - Model - INFO - eval point avg class acc: 0.756057
+2020-03-25 08:59:55,262 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.941 
+class foreground     weight: 0.942, IoU: 0.355 
 
-2020-03-18 16:25:52,820 - Model - INFO - Eval mean loss: 0.245221
-2020-03-18 16:25:52,820 - Model - INFO - Eval accuracy: 0.955259
-2020-03-18 16:25:52,820 - Model - INFO - Save model...
-2020-03-18 16:25:52,820 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
-2020-03-18 16:25:52,900 - Model - INFO - Saving model....
-2020-03-18 16:25:52,900 - Model - INFO - Best mIoU: 0.666535
-2020-03-23 14:52:00,966 - Model - INFO - PARAMETER ...
-2020-03-23 14:52:00,966 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=20, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-23 15:00:34,730 - Model - INFO - The number of training data is: 27318
-2020-03-23 15:00:34,730 - Model - INFO - The number of test data is: 6830
-2020-03-23 15:00:34,771 - Model - INFO - Use pretrain model
-2020-03-23 15:00:34,772 - Model - INFO - **** Epoch 1 (10/20) ****
-2020-03-23 15:00:34,772 - Model - INFO - Learning rate:0.001000
-2020-03-23 15:13:59,478 - Model - INFO - Training mean loss: 0.344128
-2020-03-23 15:13:59,479 - Model - INFO - Training accuracy: 0.917014
-2020-03-23 15:13:59,550 - Model - INFO - ---- EPOCH 001 EVALUATION ----
-2020-03-23 15:16:16,260 - Model - INFO - eval mean loss: 0.351087
-2020-03-23 15:16:16,260 - Model - INFO - eval point avg class IoU: 0.471215
-2020-03-23 15:16:16,260 - Model - INFO - eval point accuracy: 0.942430
-2020-03-23 15:16:16,260 - Model - INFO - eval point avg class acc: 0.500000
-2020-03-23 15:16:16,260 - Model - INFO - ------- IoU --------
+2020-03-25 08:59:55,262 - Model - INFO - Eval mean loss: 0.303208
+2020-03-25 08:59:55,262 - Model - INFO - Eval accuracy: 0.942964
+2020-03-25 08:59:55,262 - Model - INFO - Best fIoU: 0.370169
+2020-03-25 08:59:55,262 - Model - INFO - **** Epoch 19 (19/100) ****
+2020-03-25 08:59:55,262 - Model - INFO - Learning rate:0.000700
+2020-03-25 09:13:37,584 - Model - INFO - Training mean loss: 0.401263
+2020-03-25 09:13:37,584 - Model - INFO - Training accuracy: 0.906121
+2020-03-25 09:13:37,660 - Model - INFO - ---- EPOCH 019 EVALUATION ----
+2020-03-25 09:15:58,619 - Model - INFO - eval mean loss: 0.294132
+2020-03-25 09:15:58,619 - Model - INFO - eval point avg class IoU: 0.655834
+2020-03-25 09:15:58,619 - Model - INFO - eval point foreground IoU: 0.369133
+2020-03-25 09:15:58,619 - Model - INFO - eval point accuracy: 0.944404
+2020-03-25 09:15:58,619 - Model - INFO - eval point avg class acc: 0.765565
+2020-03-25 09:15:58,619 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.943 
+class foreground     weight: 0.942, IoU: 0.369 
+
+2020-03-25 09:15:58,619 - Model - INFO - Eval mean loss: 0.294132
+2020-03-25 09:15:58,620 - Model - INFO - Eval accuracy: 0.944404
+2020-03-25 09:15:58,620 - Model - INFO - Best fIoU: 0.370169
+2020-03-25 09:15:58,620 - Model - INFO - **** Epoch 20 (20/100) ****
+2020-03-25 09:15:58,620 - Model - INFO - Learning rate:0.000700
+2020-03-25 09:29:39,967 - Model - INFO - Training mean loss: 0.398128
+2020-03-25 09:29:39,967 - Model - INFO - Training accuracy: 0.907470
+2020-03-25 09:29:40,041 - Model - INFO - ---- EPOCH 020 EVALUATION ----
+2020-03-25 09:32:01,037 - Model - INFO - eval mean loss: 0.445089
+2020-03-25 09:32:01,037 - Model - INFO - eval point avg class IoU: 0.471129
+2020-03-25 09:32:01,037 - Model - INFO - eval point foreground IoU: 0.000000
+2020-03-25 09:32:01,037 - Model - INFO - eval point accuracy: 0.942258
+2020-03-25 09:32:01,038 - Model - INFO - eval point avg class acc: 0.500000
+2020-03-25 09:32:01,038 - Model - INFO - ------- IoU --------
 class background     weight: 0.058, IoU: 0.942 
 class foreground     weight: 0.942, IoU: 0.000 
 
-2020-03-23 15:16:16,260 - Model - INFO - Eval mean loss: 0.351087
-2020-03-23 15:16:16,261 - Model - INFO - Eval accuracy: 0.942430
-2020-03-23 15:16:16,261 - Model - INFO - Save model...
-2020-03-23 15:16:16,261 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
-2020-03-23 15:16:16,315 - Model - INFO - Saving model....
-2020-03-23 15:16:16,315 - Model - INFO - Best mIoU: 0.471215
-2020-03-23 15:16:16,315 - Model - INFO - **** Epoch 2 (11/20) ****
-2020-03-23 15:16:16,315 - Model - INFO - Learning rate:0.000700
-2020-03-24 03:53:14,478 - Model - INFO - PARAMETER ...
-2020-03-24 03:53:14,478 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=20, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-24 03:53:50,149 - Model - INFO - The number of training data is: 27318
-2020-03-24 03:53:50,149 - Model - INFO - The number of test data is: 6830
-2020-03-24 03:53:50,191 - Model - INFO - Use pretrain model
-2020-03-24 03:53:50,191 - Model - INFO - **** Epoch 1 (10/20) ****
-2020-03-24 03:53:50,191 - Model - INFO - Learning rate:0.001000
-2020-03-24 07:49:35,592 - Model - INFO - PARAMETER ...
-2020-03-24 07:49:35,592 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=20, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
-2020-03-24 07:50:11,369 - Model - INFO - The number of training data is: 27318
-2020-03-24 07:50:11,369 - Model - INFO - The number of test data is: 6830
-2020-03-24 07:50:11,410 - Model - INFO - Use pretrain model
-2020-03-24 07:50:11,411 - Model - INFO - **** Epoch 1 (10/20) ****
-2020-03-24 07:50:11,411 - Model - INFO - Learning rate:0.001000
-2020-03-24 08:03:37,238 - Model - INFO - Training mean loss: 0.345197
-2020-03-24 08:03:37,239 - Model - INFO - Training accuracy: 0.916550
-2020-03-24 08:03:37,309 - Model - INFO - ---- EPOCH 001 EVALUATION ----
-2020-03-24 08:05:53,893 - Model - INFO - eval mean loss: 0.347582
-2020-03-24 08:05:53,894 - Model - INFO - eval point avg class IoU: 0.471099
-2020-03-24 08:05:53,894 - Model - INFO - eval point accuracy: 0.942199
-2020-03-24 08:05:53,894 - Model - INFO - eval point avg class acc: 0.500000
-2020-03-24 08:05:53,894 - Model - INFO - ------- IoU --------
+2020-03-25 09:32:01,038 - Model - INFO - Eval mean loss: 0.445089
+2020-03-25 09:32:01,038 - Model - INFO - Eval accuracy: 0.942258
+2020-03-25 09:32:01,038 - Model - INFO - Best fIoU: 0.370169
+2020-03-25 09:32:01,038 - Model - INFO - **** Epoch 21 (21/100) ****
+2020-03-25 09:32:01,038 - Model - INFO - Learning rate:0.000490
+2020-03-25 09:45:42,362 - Model - INFO - Training mean loss: 0.397865
+2020-03-25 09:45:42,362 - Model - INFO - Training accuracy: 0.907820
+2020-03-25 09:45:42,362 - Model - INFO - Save model...
+2020-03-25 09:45:42,362 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
+2020-03-25 09:45:42,402 - Model - INFO - Saving model....
+2020-03-25 09:45:42,492 - Model - INFO - ---- EPOCH 021 EVALUATION ----
+2020-03-25 09:48:02,562 - Model - INFO - eval mean loss: 0.305087
+2020-03-25 09:48:02,562 - Model - INFO - eval point avg class IoU: 0.633392
+2020-03-25 09:48:02,562 - Model - INFO - eval point foreground IoU: 0.339456
+2020-03-25 09:48:02,562 - Model - INFO - eval point accuracy: 0.929945
+2020-03-25 09:48:02,562 - Model - INFO - eval point avg class acc: 0.786107
+2020-03-25 09:48:02,562 - Model - INFO - ------- IoU --------
+class background     weight: 0.058, IoU: 0.927 
+class foreground     weight: 0.942, IoU: 0.339 
+
+2020-03-25 09:48:02,563 - Model - INFO - Eval mean loss: 0.305087
+2020-03-25 09:48:02,563 - Model - INFO - Eval accuracy: 0.929945
+2020-03-25 09:48:02,563 - Model - INFO - Best fIoU: 0.370169
+2020-03-25 09:48:02,563 - Model - INFO - **** Epoch 22 (22/100) ****
+2020-03-25 09:48:02,563 - Model - INFO - Learning rate:0.000490
+2020-03-25 10:01:43,968 - Model - INFO - Training mean loss: 0.395971
+2020-03-25 10:01:43,969 - Model - INFO - Training accuracy: 0.907905
+2020-03-25 10:01:44,040 - Model - INFO - ---- EPOCH 022 EVALUATION ----
+2020-03-25 10:04:04,334 - Model - INFO - eval mean loss: 0.494591
+2020-03-25 10:04:04,334 - Model - INFO - eval point avg class IoU: 0.471129
+2020-03-25 10:04:04,334 - Model - INFO - eval point foreground IoU: 0.000000
+2020-03-25 10:04:04,334 - Model - INFO - eval point accuracy: 0.942258
+2020-03-25 10:04:04,334 - Model - INFO - eval point avg class acc: 0.500000
+2020-03-25 10:04:04,334 - Model - INFO - ------- IoU --------
 class background     weight: 0.058, IoU: 0.942 
 class foreground     weight: 0.942, IoU: 0.000 
 
-2020-03-24 08:05:53,894 - Model - INFO - Eval mean loss: 0.347582
-2020-03-24 08:05:53,894 - Model - INFO - Eval accuracy: 0.942199
-2020-03-24 08:05:53,894 - Model - INFO - Save model...
-2020-03-24 08:05:53,894 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
-2020-03-24 08:05:53,934 - Model - INFO - Saving model....
-2020-03-24 08:05:53,935 - Model - INFO - Best mIoU: 0.471099
-2020-03-24 08:05:53,935 - Model - INFO - **** Epoch 2 (11/20) ****
-2020-03-24 08:05:53,935 - Model - INFO - Learning rate:0.000700
-2020-03-24 08:19:19,502 - Model - INFO - Training mean loss: 0.342465
-2020-03-24 08:19:19,502 - Model - INFO - Training accuracy: 0.917225
-2020-03-24 08:19:19,502 - Model - INFO - Save model...
-2020-03-24 08:19:19,502 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/model.pth
-2020-03-24 08:19:19,541 - Model - INFO - Saving model....
-2020-03-24 08:19:19,614 - Model - INFO - ---- EPOCH 002 EVALUATION ----
-2020-03-24 08:21:36,020 - Model - INFO - eval mean loss: 0.248694
-2020-03-24 08:21:36,020 - Model - INFO - eval point avg class IoU: 0.662864
-2020-03-24 08:21:36,020 - Model - INFO - eval point accuracy: 0.954565
-2020-03-24 08:21:36,020 - Model - INFO - eval point avg class acc: 0.725487
-2020-03-24 08:21:36,021 - Model - INFO - ------- IoU --------
-class background     weight: 0.058, IoU: 0.953 
-class foreground     weight: 0.942, IoU: 0.372 
-
-2020-03-24 08:21:36,021 - Model - INFO - Eval mean loss: 0.248694
-2020-03-24 08:21:36,021 - Model - INFO - Eval accuracy: 0.954565
-2020-03-24 08:21:36,021 - Model - INFO - Save model...
-2020-03-24 08:21:36,021 - Model - INFO - Saving at log/sem_seg/pointnet2_sem_seg/checkpoints/best_model.pth
-2020-03-24 08:21:36,072 - Model - INFO - Saving model....
-2020-03-24 08:21:36,073 - Model - INFO - Best mIoU: 0.662864
-2020-03-24 08:21:36,073 - Model - INFO - **** Epoch 3 (12/20) ****
-2020-03-24 08:21:36,073 - Model - INFO - Learning rate:0.000700
+2020-03-25 10:04:04,335 - Model - INFO - Eval mean loss: 0.494591
+2020-03-25 10:04:04,335 - Model - INFO - Eval accuracy: 0.942258
+2020-03-25 10:04:04,335 - Model - INFO - Best fIoU: 0.370169
+2020-03-25 10:04:04,335 - Model - INFO - **** Epoch 23 (23/100) ****
+2020-03-25 10:04:04,335 - Model - INFO - Learning rate:0.000490
+2020-03-25 10:17:57,500 - Model - INFO - PARAMETER ...
+2020-03-25 10:17:57,501 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=100, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
+2020-03-25 10:18:34,622 - Model - INFO - The number of training data is: 27318
+2020-03-25 10:18:34,622 - Model - INFO - The number of test data is: 6830
+2020-03-25 10:18:34,666 - Model - INFO - No existing model, starting training from scratch...
+2020-03-25 10:18:34,667 - Model - INFO - **** Epoch 1 (1/100) ****
+2020-03-25 10:18:34,668 - Model - INFO - Learning rate:0.001000
+2020-03-25 13:17:00,288 - Model - INFO - PARAMETER ...
+2020-03-25 13:17:00,288 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=100, gpu='0', learning_rate=0.001, log_dir='pointnet2_sem_seg', lr_decay=0.7, model='pointnet2_sem_seg', npoint=512, optimizer='Adam', split_ratio=0.8, step_size=10)
+2020-03-25 13:17:36,197 - Model - INFO - The number of training data is: 27318
+2020-03-25 13:17:36,197 - Model - INFO - The number of test data is: 6830
+2020-03-25 13:17:36,236 - Model - INFO - No existing model, starting training from scratch...
+2020-03-25 13:17:36,238 - Model - INFO - **** Epoch 1 (1/100) ****
+2020-03-25 13:17:36,238 - Model - INFO - Learning rate:0.001000

@@ -5,7 +5,7 @@ from torch.utils.data import Dataset
 DATA_ROOT = '/media/idriver/TartisanHardDisk/00-datasets/nuscenes/v1.0-trainval/radar_npy/'
 
 class RadarDataset(Dataset):
-    def __init__(self, split='train', data_root='/', num_point=512, split_ratio=0.8):
+    def __init__(self, split='train', data_root='/', num_point=512, model='pointnet2_sem_seg', split_ratio=0.8):
         super().__init__()
         self.num_point = num_point
         # load all file
@@ -30,7 +30,10 @@ class RadarDataset(Dataset):
             else:
                 selected_point_idxs = np.random.choice(point_idxs, self.num_point, replace=True)
             re_sample = sample[selected_point_idxs, :]
-            data_batches.append(re_sample[:, 0:15])
+            if model == 'pointnet2_sem_seg':
+                data_batches.append(re_sample[:, 0:15])
+            else: 
+                data_batches.append(re_sample[:, [0,1,2,4,5,6]])
             label_batches.append(re_sample[:, -1])
             
         split_num = np.floor(self.num_sample * split_ratio).astype(int)
