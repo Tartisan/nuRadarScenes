@@ -8,7 +8,7 @@ import numpy as np
 import os
 import itertools
 
-class DataReader:
+class NuscenesReader:
     def __init__(self,
                  version: str = 'v1.0-mini',
                  dataroot: str = '/datasets/nuscenes',

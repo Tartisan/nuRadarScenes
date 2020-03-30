@@ -3,6 +3,7 @@ import os
 import sys
 from data_utils.plot import PlotNuscenes
 from data_utils.nuscenes_reader import NuscenesReader
+from models.fc3 import FC3
 import argparse
 import time
 import numpy as np
@@ -11,9 +12,8 @@ import torch.nn as nn
 from pathlib import Path
 import importlib
 
-DATA_IN = '/media/idriver/TartisanHardDisk/00-datasets/nuscenes/v1.0-mini/'
+DATA_IN = '/datasets/nuscenes/v1.0-mini/'
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.join(ROOT_DIR, 'models'))
 print("ROOT_DIR:", ROOT_DIR)
 
 NUM_CLASSES = 2
@@ -25,12 +25,12 @@ def parse_args():
     return parser.parse_args()
 
 def main(args):
-    classifier = FC3(15, 9, 4, 2).to(device)
     use_cuda = True if torch.cuda.is_available() else False
     device = torch.device("cuda" if use_cuda else "cpu")
-    model_dir = os.path.join(ROOT_DIR, 'log/'+args.model)
     '''MODEL LOADING'''
+    model_dir = os.path.join(ROOT_DIR, 'log/'+args.model)
     checkpoint = torch.load(model_dir + '/best_model.pth', map_location=device)
+    classifier = FC3(15, 9, 4, 2).to(device)
     classifier.load_state_dict(checkpoint['model_state_dict'])
     classifier = classifier.eval()
 

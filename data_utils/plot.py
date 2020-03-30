@@ -8,8 +8,7 @@ import numpy as np
 
 from transforms3d import quaternions, affines
 
-class Evaluation:
-
+class PlotNuscenes:
     fig = None
     ax = None
     ax2 = None
@@ -19,7 +18,7 @@ class Evaluation:
     line = None
 
     def __init__(self):
-        print('Evaluation Initialized')
+        print('PlotNuscenes Initialized')
         self.tightened = False
         self.lastRotation = None
         self.lastTranslation = None
