@@ -9,5 +9,5 @@ python test_semseg.py --model=pointnet2_sem_seg --epoch=100 --log_dir pointnet2_
 ```
 ### inference
 ```
-python inference --model=pointnet2_sem_seg
+python inference.py --model=pointnet2_sem_seg
 ```

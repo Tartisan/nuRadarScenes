@@ -61,7 +61,8 @@ def main(args):
         print('points_radar.shape:', points_radar.shape)
         # print('radar points num in boxes:', points_radar_filter.shape[1])
         pln.plot_pointcloud(points_lidar, 'c', 0.3, '.')
-        pln.plot_pointcloud(points_radar_predict, points_radar_predict[-1, :]*5, 5, 'D')
+        pln.plot_pointcloud(points_radar, 'm', 5, 'D')
+        pln.plot_pointcloud(points_radar_predict, 'k', 10, 'o')
         pln.plot_boxes(boxes)
         pln.draw(args.save_fig, ROOT_DIR+'/log/sem_seg/'+args.model+'/inference')
         end = time.time()
@@ -88,8 +89,9 @@ def inference(points_orig, classifier, model, device):
     seg_pred, trans_feat = classifier(points)
     pred_val = seg_pred.contiguous().cpu().data.numpy()
     pred_val = np.argmax(pred_val, 2)
-    # print('predict points num:', np.sum(pred_val))
-    return np.r_[points_resample.T, pred_val]
+    print('foreground points num:', np.sum(pred_val))
+    points_predict = points_resample[np.where(pred_val == 1)[0], :]
+    return points_predict.T
 
 
 if __name__ == "__main__":

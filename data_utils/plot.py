@@ -140,8 +140,8 @@ class PlotNuscenes:
             return 255, 61, 99  # Red
         elif 'vehicle' in category_name or category_name in ['bus', 'car', 'construction_vehicle', 'trailer', 'truck']:
             return 255, 158, 0  # Orange
-        # elif 'pedestrian' in category_name:
-        #     return 0, 0, 230  # Blue
+        elif 'pedestrian' in category_name:
+            return 0, 0, 230  # Blue
         # elif 'cone' in category_name or 'barrier' in category_name:
         #     return 0, 0, 0  # Black
         else:
