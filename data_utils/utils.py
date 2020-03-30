@@ -1,6 +1,41 @@
 import numpy as np
-import tensorflow as tf
 import math
+import torch
+
+def load_torch_data(file_name):
+    points_radar_with_anno = np.loadtxt(file_name, delimiter=',')
+    '''
+    radar points channels: 
+    x y z dyn_prop id rcs vx vy vx_comp vy_comp is_quality_valid ambig_state x_rms y_rms invalid_state pdh0 vx_rms vy_rms label
+    '''
+    train_ratio = 0.8
+    num_train = math.floor(points_radar_with_anno.shape[0] * train_ratio)
+    # train data
+    X_train_orig = points_radar_with_anno[:num_train, :18]
+    # delete channels: id / vx_comp / vy_comp
+    X_train_orig = np.delete(X_train_orig, [4,8,9], axis=1)
+    Y_train_orig = points_radar_with_anno[:num_train, -1]
+    Y_train_orig[Y_train_orig > 1] = 1
+    # test data
+    X_test_orig = points_radar_with_anno[num_train:, :18]
+    X_test_orig = np.delete(X_test_orig, [4,8,9], axis=1)
+    Y_test_orig = points_radar_with_anno[num_train:, -1]
+    Y_test_orig[Y_test_orig > 1] = 1
+    print("Trainset ground ratio: ", 1.-1.*np.sum(Y_train_orig)/Y_train_orig.shape[0])
+    print("Testset ground ratio: ", 1.-1.*np.sum(Y_test_orig)/Y_test_orig.shape[0])
+    # to torch tensor
+    X_train = torch.from_numpy(
+        X_train_orig).type(torch.FloatTensor) # / np.max(X_train_orig, axis=1).reshape((-1, 1))
+    X_test = torch.from_numpy(
+        X_test_orig).type(torch.FloatTensor) # / np.max(X_test_orig, axis=1).reshape((-1, 1))
+    Y_train = torch.from_numpy(Y_train_orig).type(torch.int64)
+    Y_test = torch.from_numpy(Y_test_orig).type(torch.int64)
+    print("X_train:", X_train.shape, X_train.dtype,)
+    print("Y_train:", Y_train.shape, Y_train.dtype)
+    print("X_test:", X_test.shape, X_test.dtype)
+    print("Y_test:", Y_test.shape, Y_test.dtype)
+
+    return X_train, Y_train, X_test, Y_test
 
 def load_dataset():
     points_radar_with_anno = np.loadtxt('/home/idriver/work/wt/nuRadarScenes/radar_v1.0_mini.csv', delimiter=',')
