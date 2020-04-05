@@ -1,0 +1,437 @@
+2020-04-04 03:06:27,489 - Model - INFO - PARAMETER ...
+2020-04-04 03:06:27,489 - Model - INFO - Namespace(batch_size=512, epochs=100, gamma=0.7, log_dir='fc16-3', log_interval=5, lr=0.001, model='fc16', no_cuda=False, seed=1, test_batch_size=512)
+2020-04-04 03:08:43,760 - Model - INFO - The number of training data is: 10222872
+2020-04-04 03:08:43,760 - Model - INFO - The number of test data is: 2555718
+2020-04-04 03:08:43,795 - Model - INFO - focal_loss parameters: alpha=0.010000, gamma=2
+2020-04-04 03:08:43,795 - Model - INFO - No existing model, starting training from scratch...
+2020-04-04 03:08:43,797 - Model - INFO - **** Epoch 1 (1/100) ****
+2020-04-04 03:13:43,697 - Model - INFO - PARAMETER ...
+2020-04-04 03:13:43,697 - Model - INFO - Namespace(batch_size=512, epochs=100, gamma=0.7, log_dir='fc16-3', log_interval=5, lr=0.001, model='fc16', no_cuda=False, seed=1, test_batch_size=512)
+2020-04-04 03:15:58,761 - Model - INFO - The number of training data is: 10222872
+2020-04-04 03:15:58,761 - Model - INFO - The number of test data is: 2555718
+2020-04-04 03:15:58,795 - Model - INFO - focal_loss parameters: alpha=0.010000, gamma=2
+2020-04-04 03:15:58,795 - Model - INFO - No existing model, starting training from scratch...
+2020-04-04 03:15:58,797 - Model - INFO - **** Epoch 1 (1/100) ****
+2020-04-04 03:18:57,386 - Model - INFO - Training loss: nan
+2020-04-04 03:18:57,387 - Model - INFO - Save model...
+2020-04-04 03:18:57,387 - Model - INFO - Saving at log/fc16-3/model.pth
+2020-04-04 03:18:57,411 - Model - INFO - Saving model....
+2020-04-04 03:19:15,972 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 03:19:15,972 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:19:15,972 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:19:15,972 - Model - INFO - Save model...
+2020-04-04 03:19:15,972 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:19:15,994 - Model - INFO - Saving model....
+2020-04-04 03:19:15,994 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:19:15,994 - Model - INFO - **** Epoch 2 (2/100) ****
+2020-04-04 03:22:14,985 - Model - INFO - Training loss: nan
+2020-04-04 03:22:32,040 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 03:22:32,040 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:22:32,040 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:22:32,040 - Model - INFO - Save model...
+2020-04-04 03:22:32,041 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:22:32,095 - Model - INFO - Saving model....
+2020-04-04 03:22:32,095 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:22:32,095 - Model - INFO - **** Epoch 3 (3/100) ****
+2020-04-04 03:25:31,013 - Model - INFO - Training loss: nan
+2020-04-04 03:25:49,171 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 03:25:49,172 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:25:49,172 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:25:49,172 - Model - INFO - Save model...
+2020-04-04 03:25:49,172 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:25:49,221 - Model - INFO - Saving model....
+2020-04-04 03:25:49,221 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:25:49,221 - Model - INFO - **** Epoch 4 (4/100) ****
+2020-04-04 03:28:47,076 - Model - INFO - Training loss: nan
+2020-04-04 03:29:04,239 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 03:29:04,239 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:29:04,239 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:29:04,239 - Model - INFO - Save model...
+2020-04-04 03:29:04,239 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:29:04,288 - Model - INFO - Saving model....
+2020-04-04 03:29:04,288 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:29:04,289 - Model - INFO - **** Epoch 5 (5/100) ****
+2020-04-04 03:32:02,469 - Model - INFO - Training loss: nan
+2020-04-04 03:32:20,124 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 03:32:20,124 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:32:20,124 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:32:20,124 - Model - INFO - Save model...
+2020-04-04 03:32:20,124 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:32:20,172 - Model - INFO - Saving model....
+2020-04-04 03:32:20,172 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:32:20,172 - Model - INFO - **** Epoch 6 (6/100) ****
+2020-04-04 03:35:18,441 - Model - INFO - Training loss: nan
+2020-04-04 03:35:18,442 - Model - INFO - Save model...
+2020-04-04 03:35:18,442 - Model - INFO - Saving at log/fc16-3/model.pth
+2020-04-04 03:35:18,496 - Model - INFO - Saving model....
+2020-04-04 03:35:35,704 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 03:35:35,704 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:35:35,704 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:35:35,704 - Model - INFO - Save model...
+2020-04-04 03:35:35,704 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:35:35,764 - Model - INFO - Saving model....
+2020-04-04 03:35:35,764 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:35:35,764 - Model - INFO - **** Epoch 7 (7/100) ****
+2020-04-04 03:38:34,732 - Model - INFO - Training loss: nan
+2020-04-04 03:38:52,008 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 03:38:52,009 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:38:52,009 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:38:52,009 - Model - INFO - Save model...
+2020-04-04 03:38:52,009 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:38:52,064 - Model - INFO - Saving model....
+2020-04-04 03:38:52,065 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:38:52,065 - Model - INFO - **** Epoch 8 (8/100) ****
+2020-04-04 03:41:50,345 - Model - INFO - Training loss: nan
+2020-04-04 03:42:07,626 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 03:42:07,626 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:42:07,626 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:42:07,626 - Model - INFO - Save model...
+2020-04-04 03:42:07,626 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:42:07,681 - Model - INFO - Saving model....
+2020-04-04 03:42:07,682 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:42:07,682 - Model - INFO - **** Epoch 9 (9/100) ****
+2020-04-04 03:45:06,043 - Model - INFO - Training loss: nan
+2020-04-04 03:45:23,161 - Model - INFO - Test point avg class IoU: 0.471529
+2020-04-04 03:45:23,161 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:45:23,161 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:45:23,161 - Model - INFO - Save model...
+2020-04-04 03:45:23,161 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:45:23,217 - Model - INFO - Saving model....
+2020-04-04 03:45:23,217 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:45:23,217 - Model - INFO - **** Epoch 10 (10/100) ****
+2020-04-04 03:48:21,789 - Model - INFO - Training loss: nan
+2020-04-04 03:48:38,993 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 03:48:38,994 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:48:38,994 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:48:38,994 - Model - INFO - Save model...
+2020-04-04 03:48:38,994 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:48:39,054 - Model - INFO - Saving model....
+2020-04-04 03:48:39,054 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:48:39,054 - Model - INFO - **** Epoch 11 (11/100) ****
+2020-04-04 03:51:37,683 - Model - INFO - Training loss: nan
+2020-04-04 03:51:37,684 - Model - INFO - Save model...
+2020-04-04 03:51:37,684 - Model - INFO - Saving at log/fc16-3/model.pth
+2020-04-04 03:51:37,742 - Model - INFO - Saving model....
+2020-04-04 03:51:55,206 - Model - INFO - Test point avg class IoU: 0.471529
+2020-04-04 03:51:55,206 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:51:55,206 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:51:55,207 - Model - INFO - Save model...
+2020-04-04 03:51:55,207 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:51:55,254 - Model - INFO - Saving model....
+2020-04-04 03:51:55,254 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:51:55,255 - Model - INFO - **** Epoch 12 (12/100) ****
+2020-04-04 03:54:54,035 - Model - INFO - Training loss: nan
+2020-04-04 03:55:12,046 - Model - INFO - Test point avg class IoU: 0.471529
+2020-04-04 03:55:12,046 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:55:12,046 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:55:12,046 - Model - INFO - Save model...
+2020-04-04 03:55:12,046 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:55:12,102 - Model - INFO - Saving model....
+2020-04-04 03:55:12,102 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:55:12,102 - Model - INFO - **** Epoch 13 (13/100) ****
+2020-04-04 03:58:10,377 - Model - INFO - Training loss: nan
+2020-04-04 03:58:27,556 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 03:58:27,556 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 03:58:27,556 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 03:58:27,556 - Model - INFO - Save model...
+2020-04-04 03:58:27,556 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 03:58:27,603 - Model - INFO - Saving model....
+2020-04-04 03:58:27,604 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 03:58:27,604 - Model - INFO - **** Epoch 14 (14/100) ****
+2020-04-04 04:01:26,025 - Model - INFO - Training loss: nan
+2020-04-04 04:01:45,284 - Model - INFO - Test point avg class IoU: 0.471529
+2020-04-04 04:01:45,284 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:01:45,284 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:01:45,284 - Model - INFO - Save model...
+2020-04-04 04:01:45,284 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:01:45,340 - Model - INFO - Saving model....
+2020-04-04 04:01:45,340 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:01:45,340 - Model - INFO - **** Epoch 15 (15/100) ****
+2020-04-04 04:04:44,064 - Model - INFO - Training loss: nan
+2020-04-04 04:05:01,285 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 04:05:01,285 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:05:01,285 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:05:01,285 - Model - INFO - Save model...
+2020-04-04 04:05:01,285 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:05:01,334 - Model - INFO - Saving model....
+2020-04-04 04:05:01,334 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:05:01,335 - Model - INFO - **** Epoch 16 (16/100) ****
+2020-04-04 04:08:00,122 - Model - INFO - Training loss: nan
+2020-04-04 04:08:00,122 - Model - INFO - Save model...
+2020-04-04 04:08:00,122 - Model - INFO - Saving at log/fc16-3/model.pth
+2020-04-04 04:08:00,199 - Model - INFO - Saving model....
+2020-04-04 04:08:17,849 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 04:08:17,849 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:08:17,849 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:08:17,849 - Model - INFO - Save model...
+2020-04-04 04:08:17,849 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:08:17,906 - Model - INFO - Saving model....
+2020-04-04 04:08:17,906 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:08:17,906 - Model - INFO - **** Epoch 17 (17/100) ****
+2020-04-04 04:11:16,164 - Model - INFO - Training loss: nan
+2020-04-04 04:11:35,545 - Model - INFO - Test point avg class IoU: 0.471529
+2020-04-04 04:11:35,545 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:11:35,545 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:11:35,545 - Model - INFO - Save model...
+2020-04-04 04:11:35,545 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:11:35,593 - Model - INFO - Saving model....
+2020-04-04 04:11:35,593 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:11:35,593 - Model - INFO - **** Epoch 18 (18/100) ****
+2020-04-04 04:14:33,962 - Model - INFO - Training loss: nan
+2020-04-04 04:14:52,033 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 04:14:52,033 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:14:52,033 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:14:52,033 - Model - INFO - Save model...
+2020-04-04 04:14:52,033 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:14:52,082 - Model - INFO - Saving model....
+2020-04-04 04:14:52,082 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:14:52,082 - Model - INFO - **** Epoch 19 (19/100) ****
+2020-04-04 04:17:51,104 - Model - INFO - Training loss: nan
+2020-04-04 04:18:08,405 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 04:18:08,405 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:18:08,405 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:18:08,405 - Model - INFO - Save model...
+2020-04-04 04:18:08,406 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:18:08,463 - Model - INFO - Saving model....
+2020-04-04 04:18:08,463 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:18:08,463 - Model - INFO - **** Epoch 20 (20/100) ****
+2020-04-04 04:21:06,478 - Model - INFO - Training loss: nan
+2020-04-04 04:21:24,796 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 04:21:24,797 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:21:24,797 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:21:24,797 - Model - INFO - Save model...
+2020-04-04 04:21:24,797 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:21:24,857 - Model - INFO - Saving model....
+2020-04-04 04:21:24,857 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:21:24,857 - Model - INFO - **** Epoch 21 (21/100) ****
+2020-04-04 04:24:23,366 - Model - INFO - Training loss: nan
+2020-04-04 04:24:23,366 - Model - INFO - Save model...
+2020-04-04 04:24:23,366 - Model - INFO - Saving at log/fc16-3/model.pth
+2020-04-04 04:24:23,421 - Model - INFO - Saving model....
+2020-04-04 04:24:41,130 - Model - INFO - Test point avg class IoU: 0.471529
+2020-04-04 04:24:41,130 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:24:41,130 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:24:41,130 - Model - INFO - Save model...
+2020-04-04 04:24:41,130 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:24:41,187 - Model - INFO - Saving model....
+2020-04-04 04:24:41,187 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:24:41,187 - Model - INFO - **** Epoch 22 (22/100) ****
+2020-04-04 04:27:40,016 - Model - INFO - Training loss: nan
+2020-04-04 04:27:57,786 - Model - INFO - Test point avg class IoU: 0.471529
+2020-04-04 04:27:57,786 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:27:57,786 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:27:57,786 - Model - INFO - Save model...
+2020-04-04 04:27:57,786 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:27:57,859 - Model - INFO - Saving model....
+2020-04-04 04:27:57,859 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:27:57,859 - Model - INFO - **** Epoch 23 (23/100) ****
+2020-04-04 04:30:56,155 - Model - INFO - Training loss: nan
+2020-04-04 04:31:13,356 - Model - INFO - Test point avg class IoU: 0.471529
+2020-04-04 04:31:13,357 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:31:13,357 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:31:13,357 - Model - INFO - Save model...
+2020-04-04 04:31:13,357 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:31:13,411 - Model - INFO - Saving model....
+2020-04-04 04:31:13,411 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:31:13,411 - Model - INFO - **** Epoch 24 (24/100) ****
+2020-04-04 04:34:12,728 - Model - INFO - Training loss: nan
+2020-04-04 04:34:30,772 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 04:34:30,772 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:34:30,772 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:34:30,772 - Model - INFO - Save model...
+2020-04-04 04:34:30,772 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:34:30,825 - Model - INFO - Saving model....
+2020-04-04 04:34:30,825 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:34:30,826 - Model - INFO - **** Epoch 25 (25/100) ****
+2020-04-04 04:37:29,514 - Model - INFO - Training loss: nan
+2020-04-04 04:37:46,747 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 04:37:46,747 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:37:46,747 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:37:46,747 - Model - INFO - Save model...
+2020-04-04 04:37:46,747 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:37:46,798 - Model - INFO - Saving model....
+2020-04-04 04:37:46,798 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:37:46,798 - Model - INFO - **** Epoch 26 (26/100) ****
+2020-04-04 04:40:45,851 - Model - INFO - Training loss: nan
+2020-04-04 04:40:45,851 - Model - INFO - Save model...
+2020-04-04 04:40:45,851 - Model - INFO - Saving at log/fc16-3/model.pth
+2020-04-04 04:40:45,907 - Model - INFO - Saving model....
+2020-04-04 04:41:03,204 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 04:41:03,204 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:41:03,204 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:41:03,204 - Model - INFO - Save model...
+2020-04-04 04:41:03,204 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:41:03,260 - Model - INFO - Saving model....
+2020-04-04 04:41:03,260 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:41:03,260 - Model - INFO - **** Epoch 27 (27/100) ****
+2020-04-04 04:44:02,006 - Model - INFO - Training loss: nan
+2020-04-04 04:44:19,279 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 04:44:19,279 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:44:19,279 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:44:19,279 - Model - INFO - Save model...
+2020-04-04 04:44:19,279 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:44:19,337 - Model - INFO - Saving model....
+2020-04-04 04:44:19,337 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:44:19,337 - Model - INFO - **** Epoch 28 (28/100) ****
+2020-04-04 04:47:18,546 - Model - INFO - Training loss: nan
+2020-04-04 04:47:35,905 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 04:47:35,905 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:47:35,905 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:47:35,905 - Model - INFO - Save model...
+2020-04-04 04:47:35,906 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:47:35,976 - Model - INFO - Saving model....
+2020-04-04 04:47:35,976 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:47:35,977 - Model - INFO - **** Epoch 29 (29/100) ****
+2020-04-04 04:50:34,286 - Model - INFO - Training loss: nan
+2020-04-04 04:50:53,382 - Model - INFO - Test point avg class IoU: 0.471529
+2020-04-04 04:50:53,382 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:50:53,382 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:50:53,382 - Model - INFO - Save model...
+2020-04-04 04:50:53,382 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:50:53,439 - Model - INFO - Saving model....
+2020-04-04 04:50:53,439 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:50:53,439 - Model - INFO - **** Epoch 30 (30/100) ****
+2020-04-04 04:53:51,593 - Model - INFO - Training loss: nan
+2020-04-04 04:54:10,773 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 04:54:10,773 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:54:10,773 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:54:10,773 - Model - INFO - Save model...
+2020-04-04 04:54:10,773 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:54:10,833 - Model - INFO - Saving model....
+2020-04-04 04:54:10,833 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:54:10,834 - Model - INFO - **** Epoch 31 (31/100) ****
+2020-04-04 04:57:08,515 - Model - INFO - Training loss: nan
+2020-04-04 04:57:08,516 - Model - INFO - Save model...
+2020-04-04 04:57:08,516 - Model - INFO - Saving at log/fc16-3/model.pth
+2020-04-04 04:57:08,566 - Model - INFO - Saving model....
+2020-04-04 04:57:26,563 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 04:57:26,564 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 04:57:26,564 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 04:57:26,564 - Model - INFO - Save model...
+2020-04-04 04:57:26,564 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 04:57:26,618 - Model - INFO - Saving model....
+2020-04-04 04:57:26,618 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 04:57:26,619 - Model - INFO - **** Epoch 32 (32/100) ****
+2020-04-04 05:00:25,187 - Model - INFO - Training loss: nan
+2020-04-04 05:00:43,242 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 05:00:43,242 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:00:43,242 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:00:43,242 - Model - INFO - Save model...
+2020-04-04 05:00:43,242 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:00:43,302 - Model - INFO - Saving model....
+2020-04-04 05:00:43,303 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:00:43,303 - Model - INFO - **** Epoch 33 (33/100) ****
+2020-04-04 05:03:41,654 - Model - INFO - Training loss: nan
+2020-04-04 05:04:01,092 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 05:04:01,093 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:04:01,093 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:04:01,093 - Model - INFO - Save model...
+2020-04-04 05:04:01,093 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:04:01,150 - Model - INFO - Saving model....
+2020-04-04 05:04:01,150 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:04:01,150 - Model - INFO - **** Epoch 34 (34/100) ****
+2020-04-04 05:07:00,049 - Model - INFO - Training loss: nan
+2020-04-04 05:07:19,428 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 05:07:19,429 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:07:19,429 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:07:19,429 - Model - INFO - Save model...
+2020-04-04 05:07:19,429 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:07:19,504 - Model - INFO - Saving model....
+2020-04-04 05:07:19,504 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:07:19,505 - Model - INFO - **** Epoch 35 (35/100) ****
+2020-04-04 05:10:17,953 - Model - INFO - Training loss: nan
+2020-04-04 05:10:37,060 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 05:10:37,060 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:10:37,060 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:10:37,060 - Model - INFO - Save model...
+2020-04-04 05:10:37,060 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:10:37,114 - Model - INFO - Saving model....
+2020-04-04 05:10:37,114 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:10:37,114 - Model - INFO - **** Epoch 36 (36/100) ****
+2020-04-04 05:13:35,569 - Model - INFO - Training loss: nan
+2020-04-04 05:13:35,569 - Model - INFO - Save model...
+2020-04-04 05:13:35,569 - Model - INFO - Saving at log/fc16-3/model.pth
+2020-04-04 05:13:35,634 - Model - INFO - Saving model....
+2020-04-04 05:13:53,279 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 05:13:53,279 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:13:53,279 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:13:53,279 - Model - INFO - Save model...
+2020-04-04 05:13:53,280 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:13:53,336 - Model - INFO - Saving model....
+2020-04-04 05:13:53,336 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:13:53,336 - Model - INFO - **** Epoch 37 (37/100) ****
+2020-04-04 05:16:51,609 - Model - INFO - Training loss: nan
+2020-04-04 05:17:09,465 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 05:17:09,466 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:17:09,466 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:17:09,466 - Model - INFO - Save model...
+2020-04-04 05:17:09,466 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:17:09,522 - Model - INFO - Saving model....
+2020-04-04 05:17:09,522 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:17:09,522 - Model - INFO - **** Epoch 38 (38/100) ****
+2020-04-04 05:20:08,118 - Model - INFO - Training loss: nan
+2020-04-04 05:20:27,513 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 05:20:27,513 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:20:27,514 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:20:27,514 - Model - INFO - Save model...
+2020-04-04 05:20:27,514 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:20:27,570 - Model - INFO - Saving model....
+2020-04-04 05:20:27,570 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:20:27,570 - Model - INFO - **** Epoch 39 (39/100) ****
+2020-04-04 05:23:25,787 - Model - INFO - Training loss: nan
+2020-04-04 05:23:43,698 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 05:23:43,698 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:23:43,698 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:23:43,698 - Model - INFO - Save model...
+2020-04-04 05:23:43,698 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:23:43,758 - Model - INFO - Saving model....
+2020-04-04 05:23:43,758 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:23:43,759 - Model - INFO - **** Epoch 40 (40/100) ****
+2020-04-04 05:26:42,018 - Model - INFO - Training loss: nan
+2020-04-04 05:27:01,174 - Model - INFO - Test point avg class IoU: 0.471529
+2020-04-04 05:27:01,174 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:27:01,174 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:27:01,174 - Model - INFO - Save model...
+2020-04-04 05:27:01,174 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:27:01,246 - Model - INFO - Saving model....
+2020-04-04 05:27:01,247 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:27:01,247 - Model - INFO - **** Epoch 41 (41/100) ****
+2020-04-04 05:29:59,208 - Model - INFO - Training loss: nan
+2020-04-04 05:29:59,209 - Model - INFO - Save model...
+2020-04-04 05:29:59,209 - Model - INFO - Saving at log/fc16-3/model.pth
+2020-04-04 05:29:59,270 - Model - INFO - Saving model....
+2020-04-04 05:30:17,701 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 05:30:17,701 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:30:17,701 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:30:17,701 - Model - INFO - Save model...
+2020-04-04 05:30:17,701 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:30:17,757 - Model - INFO - Saving model....
+2020-04-04 05:30:17,757 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:30:17,758 - Model - INFO - **** Epoch 42 (42/100) ****
+2020-04-04 05:33:15,888 - Model - INFO - Training loss: nan
+2020-04-04 05:33:35,128 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 05:33:35,128 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:33:35,128 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:33:35,128 - Model - INFO - Save model...
+2020-04-04 05:33:35,128 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:33:35,184 - Model - INFO - Saving model....
+2020-04-04 05:33:35,184 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:33:35,184 - Model - INFO - **** Epoch 43 (43/100) ****
+2020-04-04 05:36:33,203 - Model - INFO - Training loss: nan
+2020-04-04 05:36:52,405 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 05:36:52,405 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:36:52,406 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:36:52,406 - Model - INFO - Save model...
+2020-04-04 05:36:52,406 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:36:52,462 - Model - INFO - Saving model....
+2020-04-04 05:36:52,463 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:36:52,463 - Model - INFO - **** Epoch 44 (44/100) ****
+2020-04-04 05:39:51,040 - Model - INFO - Training loss: nan
+2020-04-04 05:40:09,407 - Model - INFO - Test point avg class IoU: 0.471528
+2020-04-04 05:40:09,407 - Model - INFO - Test point foreground IoU: 0.000000
+2020-04-04 05:40:09,407 - Model - INFO - Test Accuracy: 2410187/2555718 = 0.9431
+2020-04-04 05:40:09,407 - Model - INFO - Save model...
+2020-04-04 05:40:09,407 - Model - INFO - Saving at log/fc16-3/best_model.pth
+2020-04-04 05:40:09,463 - Model - INFO - Saving model....
+2020-04-04 05:40:09,464 - Model - INFO - Best fIoU: 0.000000
+2020-04-04 05:40:09,464 - Model - INFO - **** Epoch 45 (45/100) ****

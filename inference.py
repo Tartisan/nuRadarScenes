@@ -14,6 +14,7 @@ import importlib
 
 DATA_IN = '/datasets/nuscenes/v1.0-mini/'
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(ROOT_DIR, 'models'))
 print("ROOT_DIR:", ROOT_DIR)
 
 NUM_CLASSES = 2
@@ -30,7 +31,9 @@ def main(args):
     '''MODEL LOADING'''
     model_dir = os.path.join(ROOT_DIR, 'log/'+args.model)
     checkpoint = torch.load(model_dir + '/best_model.pth', map_location=device)
-    classifier = FC3(15, 9, 4, 2).to(device)
+
+    MODEL = importlib.import_module(args.model)
+    classifier = MODEL.get_model().to(device)
     classifier.load_state_dict(checkpoint['model_state_dict'])
     classifier = classifier.eval()
 
@@ -69,7 +72,7 @@ def main(args):
 
 def inference(points_orig, classifier, device):
     # resample to fixed shape: num_point * 16
-    points_orig = np.delete(points_orig, [4,8,9], axis=1)
+    points_orig = np.delete(points_orig, [2,5,10,11,14,15,16,17], axis=1)
     # forward propagation
     points = torch.from_numpy(points_orig).type(torch.FloatTensor).to(device)
     output = classifier(points)

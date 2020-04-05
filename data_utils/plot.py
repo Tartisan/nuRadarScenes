@@ -16,6 +16,7 @@ class PlotNuscenes:
     scat = None
     imshow = None
     line = None
+    fig_idx = 0
 
     def __init__(self):
         print('PlotNuscenes Initialized')
@@ -146,7 +147,7 @@ class PlotNuscenes:
         else:
             return 255, 0, 255  # Magenta
 
-    def draw(self, save_fig, i):
+    def draw(self, save_fig, path):
         if self.tightened == False:
             self.tightened = True
             plt.tight_layout()
@@ -154,7 +155,8 @@ class PlotNuscenes:
             self.fig.canvas.draw_idle()
             plt.show()
             if save_fig:
-                plt.savefig('/Users/wangtao/work/github/nuRadarScenes/radarseg/torch/{}.png'.format(i))
+                plt.savefig(path + '/%03d.png' % fig_idx)
+                fig_idx += 1
             plt.pause(0.05)
             self.ax.cla()
 

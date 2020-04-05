@@ -4,8 +4,8 @@
 ```
 ## Check model in ./models 
 ## E.g. pointnet2_ssg
-python train_fc3.py --epochs=100 --log_dir fc3
+python train_cls.py --epochs=100 --model fc10 --log_dir fc10
 ```
 ### inference
 ```
-python inference --model fc3
+python inference.py --model fc10
