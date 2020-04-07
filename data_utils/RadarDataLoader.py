@@ -34,7 +34,7 @@ class RadarDataset(Dataset):
             else: 
                 resample[:, 2] = np.sqrt(np.square(resample[:, 8]) + np.square(resample[:, 9]))
                 resample[:, 2] = resample[:, 2] * np.sign(resample[:, 8])
-                data_batches.append(resample[:, [0,1,2,5]])
+                data_batches.append(resample[:, [0,1,2,5,12,13]])
             label_batches.append(resample[:, -1])
             
         split_num = np.floor(self.num_sample * split_ratio).astype(int)
@@ -50,7 +50,7 @@ class RadarDataset(Dataset):
         # set weights according to num of each label
         labelweights,_ = np.histogram(self.labels, range(3))
         labelweights = labelweights.astype(np.float32) / np.sum(labelweights)
-        self.labelweights = np.power(np.amax(labelweights) / labelweights, 1 / 6.0)
+        self.labelweights = np.power(np.amax(labelweights) / labelweights, 1 / 3.0)
         print('self.labelweights:', self.labelweights)
 
     def __getitem__(self, idx):

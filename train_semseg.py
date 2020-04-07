@@ -103,10 +103,10 @@ def main(args):
     '''MODEL LOADING'''
     MODEL = importlib.import_module(args.model)
     shutil.copy('models/%s.py' % args.model, str(experiment_dir))
-    shutil.copy('models/pointnet_util.py', str(experiment_dir))
+    shutil.copy('models/pointnet.py', str(experiment_dir))
     shutil.copy('data_utils/RadarDataLoader.py', str(experiment_dir))
 
-    classifier = MODEL.get_model(NUM_CLASSES, channel=4).to(device)
+    classifier = MODEL.get_model(NUM_CLASSES, channel=6).to(device)
     criterion = MODEL.get_loss().to(device)
 
     def weights_init(m):
