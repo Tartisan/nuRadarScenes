@@ -7,12 +7,12 @@ from models.pointnet import PointNetEncoder, feature_transform_reguliarzer
 
 
 class get_model(nn.Module):
-    def __init__(self, num_class, with_rgb=True):
+    def __init__(self, num_class, channel=3, with_rgb=True):
         super(get_model, self).__init__()
-        if with_rgb:
-            channel = 6
-        else:
-            channel = 3
+        # if with_rgb:
+        #     channel = 6
+        # else:
+        #     channel = 3
         self.k = num_class
         self.feat = PointNetEncoder(global_feat=False, feature_transform=True, channel=channel)
         self.conv1 = torch.nn.Conv1d(1088, 512, 1)
@@ -44,7 +44,13 @@ class get_loss(torch.nn.Module):
     def forward(self, pred, target, trans_feat, weight):
         loss = F.nll_loss(pred, target, weight = weight)
         mat_diff_loss = feature_transform_reguliarzer(trans_feat)
-        total_loss = loss + mat_diff_loss * self.mat_diff_loss_scale
+        ## foreground iou loss
+        pred_val = torch.argmax(pred, dim=1)
+        f_I = torch.sum((pred_val == 1) & (target == 1)).type(torch.FloatTensor)
+        f_U = torch.sum((pred_val == 1) | (target == 1)).type(torch.FloatTensor) + 1e-6
+        fIoU_loss = 1 - f_I / f_U
+        ## total_loss
+        total_loss = loss + mat_diff_loss * self.mat_diff_loss_scale + 0.3 * fIoU_loss
         return total_loss
 
 

@@ -40,7 +40,7 @@ def parse_args():
     parser.add_argument('--optimizer', type=str, default='Adam', help='Adam or SGD [default: Adam]')
     parser.add_argument('--log_dir', type=str, default=None, help='Log path [default: None]')
     parser.add_argument('--decay_rate', type=float, default=1e-4, help='weight decay [default: 1e-4]')
-    parser.add_argument('--npoint', type=int,  default=512, help='Point Number [default: 400]')
+    parser.add_argument('--npoint', type=int,  default=400, help='Point Number [default: 400]')
     parser.add_argument('--step_size', type=int,  default=10, help='Decay step for lr decay [default: every 10 epochs]')
     parser.add_argument('--lr_decay', type=float,  default=0.7, help='Decay rate for lr decay [default: 0.7]')
     parser.add_argument('--split_ratio', type=int, default=0.8, help='Split ratio for train and test [default: 0.8]')
@@ -104,8 +104,9 @@ def main(args):
     MODEL = importlib.import_module(args.model)
     shutil.copy('models/%s.py' % args.model, str(experiment_dir))
     shutil.copy('models/pointnet_util.py', str(experiment_dir))
+    shutil.copy('data_utils/RadarDataLoader.py', str(experiment_dir))
 
-    classifier = MODEL.get_model(NUM_CLASSES).to(device)
+    classifier = MODEL.get_model(NUM_CLASSES, channel=4).to(device)
     criterion = MODEL.get_loss().to(device)
 
     def weights_init(m):

@@ -19,22 +19,23 @@ class RadarDataset(Dataset):
             x y z dyn_prop id rcs vx vy vx_comp vy_comp is_quality_valid ambig_state x_rms y_rms invalid_state pdh0 vx_rms vy_rms label
             '''
             sample = np.load(DATA_ROOT + npy_filename) # sample.shape[0] * 19
-            # delete channels: id / vx_comp / vy_comp
-            sample = np.delete(sample, [4,8,9], axis=1)
+            ## normalization
             sample[sample[:, -1] >= 1, -1] = 1
-            sample[sample[:, -1] < 1, -1] = 0
-            # resample to fixed shape: num_point * 16
+            # sample[:, :18] = sample[:, :18] / (np.max(sample[:, :18], axis=0).reshape(1, -1) + 1e-5)
+            ## resample 
             point_idxs = np.array(range(sample.shape[0]))
             if sample.shape[0] >= self.num_point:
                 selected_point_idxs = np.random.choice(point_idxs, self.num_point, replace=False)
             else:
                 selected_point_idxs = np.random.choice(point_idxs, self.num_point, replace=True)
-            re_sample = sample[selected_point_idxs, :]
+            resample = sample[selected_point_idxs, :]
             if model == 'pointnet2_sem_seg':
-                data_batches.append(re_sample[:, 0:15])
+                data_batches.append(resample[:, 0:18])
             else: 
-                data_batches.append(re_sample[:, [0,1,2,4,5,6]])
-            label_batches.append(re_sample[:, -1])
+                resample[:, 2] = np.sqrt(np.square(resample[:, 8]) + np.square(resample[:, 9]))
+                resample[:, 2] = resample[:, 2] * np.sign(resample[:, 8])
+                data_batches.append(resample[:, [0,1,2,5]])
+            label_batches.append(resample[:, -1])
             
         split_num = np.floor(self.num_sample * split_ratio).astype(int)
         if split == 'train': 
@@ -49,7 +50,7 @@ class RadarDataset(Dataset):
         # set weights according to num of each label
         labelweights,_ = np.histogram(self.labels, range(3))
         labelweights = labelweights.astype(np.float32) / np.sum(labelweights)
-        self.labelweights = np.power(np.amax(labelweights) / labelweights, 1 / 3.0)
+        self.labelweights = np.power(np.amax(labelweights) / labelweights, 1 / 6.0)
         print('self.labelweights:', self.labelweights)
 
     def __getitem__(self, idx):

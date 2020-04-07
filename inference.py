@@ -12,12 +12,13 @@ from pathlib import Path
 import importlib
 
 DATA_IN = '/datasets/nuscenes/v1.0-mini/'
+# DATA_IN = '/media/idriver/TartisanHardDisk/00-datasets/nuscenes/v1.0-mini/'
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
 print("ROOT_DIR:", ROOT_DIR)
 
 NUM_CLASSES = 2
-NUM_POINT = 512
+NUM_POINT = 400
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Process some integers.')
@@ -31,7 +32,7 @@ def main(args):
     device = torch.device("cuda" if use_cuda else "cpu")
     model_dir = os.path.join(ROOT_DIR, 'log/sem_seg/'+args.model+'/checkpoints')
     '''MODEL LOADING'''
-    classifier = MODEL.get_model(NUM_CLASSES).to(device)
+    classifier = MODEL.get_model(NUM_CLASSES, channel=4).to(device)
     criterion = MODEL.get_loss().to(device)
     checkpoint = torch.load(model_dir + '/best_model.pth', map_location=device)
     classifier.load_state_dict(checkpoint['model_state_dict'])
@@ -61,7 +62,8 @@ def main(args):
         print('points_radar.shape:', points_radar.shape)
         # print('radar points num in boxes:', points_radar_filter.shape[1])
         pln.plot_pointcloud(points_lidar, 'c', 0.3, '.')
-        pln.plot_pointcloud(points_radar_predict, points_radar_predict[-1, :]*5, 5, 'D')
+        pln.plot_pointcloud(points_radar, 'm', 5, 'D')
+        pln.plot_pointcloud(points_radar_predict, 'k', 10, 'o')
         pln.plot_boxes(boxes)
         pln.draw(args.save_fig, ROOT_DIR+'/log/sem_seg/'+args.model+'/inference')
         end = time.time()
@@ -70,8 +72,6 @@ def main(args):
         # print("Time per frame: {:1.4f}s".format(time.time() - start))
 
 def inference(points_orig, classifier, model, device):
-    # resample to fixed shape: num_point * 16
-    points_orig = np.delete(points_orig, [4,8,9], axis=1)
     point_idxs = np.array(range(points_orig.shape[0]))
     if points_orig.shape[0] >= NUM_POINT:
         selected_point_idxs = np.random.choice(point_idxs, NUM_POINT, replace=False)
@@ -81,15 +81,18 @@ def inference(points_orig, classifier, model, device):
         points_resample = points_orig[selected_point_idxs, :]
     else: 
         points_resample = points_orig[selected_point_idxs, :]
-        points_resample = points_resample[:, [0,1,2,4,5,6]]
+        points_resample[:, 2] = np.sqrt(np.square(points_resample[:, 8]) + np.square(points_resample[:, 9]))
+        points_resample[:, 2] = points_resample[:, 2] * np.sign(points_resample[:, 8])
+        points_resample = points_resample[:, [0,1,2,5]]
     # forward propagation
     points = torch.Tensor(points_resample).float().to(device).view(1, NUM_POINT, -1)
     points = points.transpose(2, 1)
     seg_pred, trans_feat = classifier(points)
     pred_val = seg_pred.contiguous().cpu().data.numpy()
     pred_val = np.argmax(pred_val, 2)
-    # print('predict points num:', np.sum(pred_val))
-    return np.r_[points_resample.T, pred_val]
+    print('foreground points num:', np.sum(pred_val))
+    points_predict = points_resample[np.where(pred_val == 1)[1], :]
+    return points_predict.T
 
 
 if __name__ == "__main__":
