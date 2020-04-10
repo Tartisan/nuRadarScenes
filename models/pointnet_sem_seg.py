@@ -7,14 +7,10 @@ from models.pointnet import PointNetEncoder, feature_transform_reguliarzer
 
 
 class get_model(nn.Module):
-    def __init__(self, num_class, channel=3, with_rgb=True):
+    def __init__(self, n_class, n_channel=4):
         super(get_model, self).__init__()
-        # if with_rgb:
-        #     channel = 6
-        # else:
-        #     channel = 3
-        self.k = num_class
-        self.feat = PointNetEncoder(global_feat=False, feature_transform=True, channel=channel)
+        self.k = n_class
+        self.feat = PointNetEncoder(global_feat=False, feature_transform=True, n_channel=n_channel)
         self.conv1 = torch.nn.Conv1d(1088, 512, 1)
         self.conv2 = torch.nn.Conv1d(512, 256, 1)
         self.conv3 = torch.nn.Conv1d(256, 128, 1)
@@ -24,13 +20,18 @@ class get_model(nn.Module):
         self.bn3 = nn.BatchNorm1d(128)
 
     def forward(self, x):
+        '''
+        :param x, [bs,4,n], 4 channels: x,y,vr,rcs
+        :return x, [bs,n,k]
+        :return trans_feat, [bs,64,64]
+        '''
         batchsize = x.size()[0]
         n_pts = x.size()[2]
-        x, trans, trans_feat = self.feat(x)
-        x = F.relu(self.bn1(self.conv1(x)))
-        x = F.relu(self.bn2(self.conv2(x)))
-        x = F.relu(self.bn3(self.conv3(x)))
-        x = self.conv4(x)
+        x, trans, trans_feat = self.feat(x) # bs,1088,n
+        x = F.relu(self.bn1(self.conv1(x))) # bs,512,n
+        x = F.relu(self.bn2(self.conv2(x))) # bs,256,n
+        x = F.relu(self.bn3(self.conv3(x))) # bs,128,n
+        x = self.conv4(x)                   # bs,n_class,n
         x = x.transpose(2,1).contiguous()
         x = F.log_softmax(x.view(-1,self.k), dim=-1)
         x = x.view(batchsize, n_pts, self.k)
@@ -42,6 +43,10 @@ class get_loss(torch.nn.Module):
         self.mat_diff_loss_scale = mat_diff_loss_scale
 
     def forward(self, pred, target, trans_feat, weight):
+        '''
+        :param pred, [bs*n,k]
+        :param target, [bs*n,1]
+        '''
         loss = F.nll_loss(pred, target, weight = weight)
         mat_diff_loss = feature_transform_reguliarzer(trans_feat)
         ## foreground iou loss

@@ -4,27 +4,28 @@ import torch.nn.functional as F
 from pointnet import PointNetEncoder, feature_transform_reguliarzer
 
 class get_model(nn.Module):
-    def __init__(self, k=40, normal_channel=True):
+    def __init__(self, n_class=2, n_channel=4):
         super(get_model, self).__init__()
-        if normal_channel:
-            channel = 6
-        else:
-            channel = 3
-        self.feat = PointNetEncoder(global_feat=True, feature_transform=True, channel=channel)
+        self.feat = PointNetEncoder(global_feat=True, feature_transform=True, n_channel=n_channel)
         self.fc1 = nn.Linear(1024, 512)
         self.fc2 = nn.Linear(512, 256)
-        self.fc3 = nn.Linear(256, k)
+        self.fc3 = nn.Linear(256, n_class)
         self.dropout = nn.Dropout(p=0.4)
         self.bn1 = nn.BatchNorm1d(512)
         self.bn2 = nn.BatchNorm1d(256)
         self.relu = nn.ReLU()
 
     def forward(self, x):
-        x, trans, trans_feat = self.feat(x)
-        x = F.relu(self.bn1(self.fc1(x)))
-        x = F.relu(self.bn2(self.dropout(self.fc2(x))))
-        x = self.fc3(x)
-        x = F.log_softmax(x, dim=1)
+        '''
+        :param x [bs,4]: x,y,vr,rcs
+        :retur x2 [bs,2]
+        '''
+        n_points = x.size()[2]
+        x, trans, trans_feat = self.feat(x) # bs,1024
+        x = F.relu(self.bn1(self.fc1(x))) # bs,512
+        x = F.relu(self.bn2(self.dropout(self.fc2(x)))) # bs,256
+        x = self.fc3(x) # bs,n_class
+        x = F.log_softmax(x, dim=1) # bs,n_class
         return x, trans_feat
 
 class get_loss(torch.nn.Module):

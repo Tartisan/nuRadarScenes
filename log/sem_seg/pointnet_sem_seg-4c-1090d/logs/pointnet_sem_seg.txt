@@ -1,0 +1,14 @@
+2020-04-09 07:36:47,690 - Model - INFO - PARAMETER ...
+2020-04-09 07:36:47,690 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=100, gpu='0', learning_rate=0.001, log_dir='pointnet_sem_seg-4c-1090d', lr_decay=0.7, model='pointnet_sem_seg', npoint=400, optimizer='Adam', split_ratio=0.8, step_size=10)
+2020-04-09 07:37:24,805 - Model - INFO - The number of training data is: 27318
+2020-04-09 07:37:24,805 - Model - INFO - The number of test data is: 6830
+2020-04-09 07:37:24,838 - Model - INFO - No existing model, starting training from scratch...
+2020-04-09 07:37:24,839 - Model - INFO - **** Epoch 1 (1/100) ****
+2020-04-09 07:37:24,839 - Model - INFO - Learning rate:0.001000
+2020-04-09 07:41:29,662 - Model - INFO - PARAMETER ...
+2020-04-09 07:41:29,663 - Model - INFO - Namespace(batch_size=16, decay_rate=0.0001, epoch=100, gpu='0', learning_rate=0.001, log_dir='pointnet_sem_seg-4c-1090d', lr_decay=0.7, model='pointnet_sem_seg', npoint=400, optimizer='Adam', split_ratio=0.8, step_size=10)
+2020-04-09 07:42:06,022 - Model - INFO - The number of training data is: 27318
+2020-04-09 07:42:06,023 - Model - INFO - The number of test data is: 6830
+2020-04-09 07:42:06,052 - Model - INFO - No existing model, starting training from scratch...
+2020-04-09 07:42:06,053 - Model - INFO - **** Epoch 1 (1/100) ****
+2020-04-09 07:42:06,053 - Model - INFO - Learning rate:0.001000

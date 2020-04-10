@@ -34,7 +34,7 @@ class RadarDataset(Dataset):
             else: 
                 resample[:, 2] = np.sqrt(np.square(resample[:, 8]) + np.square(resample[:, 9]))
                 resample[:, 2] = resample[:, 2] * np.sign(resample[:, 8])
-                data_batches.append(resample[:, [0,1,2,5,12,13]])
+                data_batches.append(resample[:, [0,1,2,5]]) # [0,1,2,5,12,13]
             label_batches.append(resample[:, -1])
             
         split_num = np.floor(self.num_sample * split_ratio).astype(int)

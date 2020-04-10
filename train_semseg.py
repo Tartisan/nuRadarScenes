@@ -106,7 +106,7 @@ def main(args):
     shutil.copy('models/pointnet.py', str(experiment_dir))
     shutil.copy('data_utils/RadarDataLoader.py', str(experiment_dir))
 
-    classifier = MODEL.get_model(NUM_CLASSES, channel=6).to(device)
+    classifier = MODEL.get_model(NUM_CLASSES, 4).to(device)
     criterion = MODEL.get_loss().to(device)
 
     def weights_init(m):
@@ -119,7 +119,7 @@ def main(args):
             torch.nn.init.constant_(m.bias.data, 0.0)
 
     try:
-        checkpoint = torch.load(str(experiment_dir) + '/checkpoints/best_model.pth')
+        checkpoint = torch.load(str(checkpoints_dir) + '/best_model.pth')
         start_epoch = checkpoint['epoch']
         best_iou = checkpoint['foreground_iou']
         classifier.load_state_dict(checkpoint['model_state_dict'])
