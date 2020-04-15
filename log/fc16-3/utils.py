@@ -13,7 +13,7 @@ def load_torch_data(file_name):
     # train data
     X_train_orig = points_radar_with_anno[:num_train, :18]
     # delete channels: 
-    #   z / rcs / is_quality_valid / ambig_state / invalid_state / pdh0 / vx_rms / vy_rms
+    #   z / rcs / vx / vy / is_quality_valid / ambig_state / invalid_state / pdh0 / vx_rms / vy_rms
     X_train_orig = np.delete(X_train_orig, [2,3,4,6,7,10,11,12,13,14,15,16,17], axis=1)
     Y_train_orig = points_radar_with_anno[:num_train, -1]
     Y_train_orig[Y_train_orig > 1] = 1

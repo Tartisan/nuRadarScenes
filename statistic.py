@@ -38,17 +38,21 @@ def plot_hist(key, points):
     edgecolor:长条形边框的颜色
     alpha:透明度
     """
-    points_channel_neg = points[np.where(points[:, -1] == 0), CHANNELS[key]].T
-    points_channel_pos = points[np.where(points[:, -1] >= 1), CHANNELS[key]].T
+    points_channel_back = points[np.where(points[:, -1] == 0), CHANNELS[key]].T
+    points_channel_fore = points[np.where(points[:, -1] >= 1), CHANNELS[key]].T
+    mean_back, std_back = np.mean(points_channel_back), np.std(points_channel_back)
+    mean_fore, std_fore = np.mean(points_channel_fore), np.std(points_channel_fore)
 
     plt.figure(figsize=(12, 8))
     plt.suptitle('Channel: ' + key, fontsize=14)
     plt.subplot(1,2,1)
-    plt.hist(points_channel_pos, bins=20, density=1, facecolor="blue", edgecolor="black", alpha=0.7)
+    plt.hist(points_channel_fore, bins=20, density=1, facecolor="blue", edgecolor="black", alpha=0.7)
     plt.title('foreground')
+    plt.xlabel('mean: %.2f, std: %.2f' % (mean_fore, std_fore))
     plt.subplot(1,2,2)
-    plt.hist(points_channel_neg, bins=20, density=1, facecolor="blue", edgecolor="black", alpha=0.7)
+    plt.hist(points_channel_back, bins=20, density=1, facecolor="blue", edgecolor="black", alpha=0.7)
     plt.title('background')
+    plt.xlabel('mean: %.2f, std: %.2f' % (mean_back, std_back))
 
 
 if __name__ == "__main__":
